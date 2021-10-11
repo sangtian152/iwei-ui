@@ -59,7 +59,6 @@ const PopupManager = {
   doOnModalClick: function() {
     const topItem = PopupManager.modalStack[PopupManager.modalStack.length - 1];
     if (!topItem) return;
-    console.log(instance.closeOnClickModal, 62)
     const instance = PopupManager.getInstance(topItem.id);
     if (instance && instance.closeOnClickModal) {
       instance.close();

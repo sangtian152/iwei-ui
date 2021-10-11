@@ -36,5 +36,7 @@
   "datetime-picker": "./packages/datetime-picker/index.js",
   "index-list": "./packages/index-list/index.js",
   "index-section": "./packages/index-section/index.js",
-  "palette-button": "./packages/palette-button/index.js"
+  "palette-button": "./packages/palette-button/index.js",
+  "notice-bar": "./packages/notice-bar/index.js",
+  "sticky": "./packages/sticky/index.js"
 }

@@ -5,6 +5,8 @@ $border-color: #c8c8cd;
 $success-color: #4caf50;
 $error-color: #f44336;
 $warning-color: #ffc107;
+$orange-dark: #ed6a0c;
+$orange-light: #fffbe8;
 $gray-1: #f7f8fa;
 $gray-2: #f2f3f5;
 $gray-3: #ebedf0;
@@ -13,6 +15,14 @@ $gray-5: #c8c9cc;
 $gray-6: #969799;
 $gray-7: #646566;
 $gray-8: #323233;
+
+// Padding
+$padding-base: 4px;
+$padding-xs: $padding-base * 2;
+$padding-sm: $padding-base * 3;
+$padding-md: $padding-base * 4;
+$padding-lg: $padding-base * 6;
+$padding-xl: $padding-base * 8;
 
 /* Cell Component */
 $cell-value-color: #888;
@@ -59,3 +69,14 @@ $image-loading-icon-size: 32px;
 $image-loading-icon-color: $gray-4;
 $image-error-icon-size: 32px;
 $image-error-icon-color: $gray-4;
+
+// NoticeBar
+$notice-bar-height: 40px;
+$notice-bar-padding: 0 $padding-md;
+$notice-bar-wrapable-padding: $padding-xs $padding-md;
+$notice-bar-text-color: $orange-dark;
+$notice-bar-font-size: 14px;
+$notice-bar-line-height: 24px;
+$notice-bar-background-color: $orange-light;
+$notice-bar-icon-size: 16px;
+$notice-bar-icon-min-width: 24px;

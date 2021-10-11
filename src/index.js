@@ -35,6 +35,8 @@ import DatetimePicker from '../packages/datetime-picker';
 import IndexList from '../packages/index-list';
 import IndexSection from '../packages/index-section';
 import PaletteButton from '../packages/palette-button';
+import NoticeBar from '../packages/notice-bar';
+import Sticky from '../packages/sticky';
 import '../src/assets/font/iconfont.css';
 import merge from './utils/merge';
 
@@ -74,6 +76,8 @@ export const install = function(Vue, config = {}) {
   Vue.component(IndexList.name, IndexList);
   Vue.component(IndexSection.name, IndexSection);
   Vue.component(PaletteButton.name, PaletteButton);
+  Vue.component(NoticeBar.name, NoticeBar);
+  Vue.component(Sticky.name, Sticky);
   Vue.use(InfiniteScroll);
   Vue.use(Lazyload, merge({
     loading: require('./assets/loading-spin.svg'),
@@ -126,6 +130,8 @@ export { default as DatetimePicker } from '../packages/datetime-picker';
 export { default as IndexList } from '../packages/index-list';
 export { default as IndexSection } from '../packages/index-section';
 export { default as PaletteButton } from '../packages/palette-button';
+export { default as NoticeBar } from '../packages/notice-bar';
+export { default as Sticky } from '../packages/sticky';
 export default {
   install,
   version,
@@ -165,5 +171,7 @@ export default {
   DatetimePicker,
   IndexList,
   IndexSection,
-  PaletteButton
+  PaletteButton,
+  NoticeBar,
+  Sticky
 };

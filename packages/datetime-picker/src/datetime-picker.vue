@@ -1,15 +1,20 @@
 <template>
   <mt-popup v-model="visible" :closeOnClickModal="closeOnClickModal" position="bottom" class="zmbl-datetime">
+    <slot name="header"></slot>
+    <div class="picker-toolbar" v-if="showToolbar">
+      <slot name="tool-bar">
+        <span class="zmbl-datetime-action zmbl-datetime-cancel" @click="visible = false;$emit('cancel')">{{ cancelText }}</span>
+        <span class="zmbl-datetime-action zmbl-datetime-confirm" @click="confirm">{{ confirmText }}</span>
+      </slot>
+    </div>
     <mt-picker
       :slots="dateSlots"
       @change="onChange"
       :visible-item-count="visibleItemCount"
       class="zmbl-datetime-picker"
-      ref="picker"
-      show-toolbar>
-      <span class="zmbl-datetime-action zmbl-datetime-cancel" @click="visible = false;$emit('cancel')">{{ cancelText }}</span>
-      <span class="zmbl-datetime-action zmbl-datetime-confirm" @click="confirm">{{ confirmText }}</span>
+      ref="picker">
     </mt-picker>
+    <slot name="footer"></slot>
   </mt-popup>
 </template>
 
@@ -125,6 +130,10 @@
         default: 7
       },
       closeOnClickModal: {
+        type: Boolean,
+        default: true
+      },
+      showToolbar: {
         type: Boolean,
         default: true
       },

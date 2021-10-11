@@ -8,7 +8,6 @@
         :to="item.path"
         is-link>
         <div slot="title">
-          <i :class="['indexicon', 'icon-' + item.icon]"></i>
           <span>{{ item.name }}</span>
         </div>
       </mt-cell>
@@ -50,6 +49,12 @@
 
     created() {
       this.navs = navs;
+      console.log(this, 53)
+    },
+    methods:{
+      log(){
+        console.log('log')
+      }
     }
   };
 </script>

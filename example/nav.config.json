@@ -4,93 +4,79 @@
     "list": [
       {
         "path": "/toast",
-        "name": "Toast",
-        "icon": "toast"
+        "name": "Toast"
       },
       {
         "path": "/indicator",
-        "name": "Indicator",
-        "icon": "indicator"
+        "name": "Indicator"
       },
       {
         "path": "/pull-down",
-        "name": "Pull down",
-        "icon": "pull-down"
+        "name": "Pull down"
       },
       {
         "path": "/pull-up",
-        "name": "Pull up",
-        "icon": "pull-up"
+        "name": "Pull up"
       },
       {
         "path": "/infinite-scroll",
-        "name": "Infinite scroll",
-        "icon": "infinite-scroll"
+        "name": "Infinite scroll"
       },
       {
         "path": "/dialog",
-        "name": "Dialog",
-        "icon": "dialog"
+        "name": "Dialog"
       },
       {
         "path": "/message-box",
-        "name": "Message box",
-        "icon": "message-box"
+        "name": "Message box"
       },
       {
         "path": "/action-sheet",
-        "name": "Action sheet",
-        "icon": "action-sheet"
+        "name": "Action sheet"
       },
       {
         "path": "/popup",
-        "name": "Popup",
-        "icon": "popup"
+        "name": "Popup"
       },
       {
         "path": "/popper",
-        "name": "Popper",
-        "icon": "popper"
+        "name": "Popper"
       },
       {
         "path": "/swipe",
-        "name": "Swipe",
-        "icon": "swipe"
+        "name": "Swipe"
       },
       {
         "path": "/lazyload",
-        "name": "Lazy load",
-        "icon": "lazyload"
+        "name": "Lazy load"
       },
       {
         "path": "/range",
-        "name": "Range",
-        "icon": "range"
+        "name": "Range"
       },
       {
         "path": "/progress",
-        "name": "Progress",
-        "icon": "progress"
+        "name": "Progress"
       },
       {
         "path": "/picker",
-        "name": "Picker",
-        "icon": "picker"
+        "name": "Picker"
       },
       {
         "path": "/datetime-picker",
-        "name": "Datetime Picker",
-        "icon": "time"
+        "name": "Datetime Picker"
       },
       {
         "path": "/index-list",
-        "name": "Index List",
-        "icon": "alphabet"
+        "name": "Index List"
       },
       {
         "path": "/palette-button",
-        "name": "Palette Button",
-        "icon": "alphabet"
+        "name": "Palette Button"
+      },
+      {
+        "path": "/image-preview",
+        "name": "Image Preview"
       }
     ]
   },
@@ -99,58 +85,51 @@
     "list": [
       {
         "path": "/header",
-        "name": "Header",
-        "icon": "header"
+        "name": "Header"
       },
       {
         "path": "/tabbar",
-        "name": "Tabbar",
-        "icon": "tabbar"
+        "name": "Tabbar"
       },
       {
         "path": "/navbar",
-        "name": "Navbar",
-        "icon": "navbar"
+        "name": "Navbar"
       },
       {
         "path": "/button",
-        "name": "Button",
-        "icon": "button"
+        "name": "Button"
       },
       {
         "path": "/cell",
-        "name": "Cell",
-        "icon": "cell"
+        "name": "Cell"
       },
       {
         "path": "/cell-swipe",
-        "name": "Cell Swipe",
-        "icon": "cell"
+        "name": "Cell Swipe"
       },
       {
         "path": "/spinner",
-        "name": "Spinner",
-        "icon": "spinner"
+        "name": "Spinner"
       },
       {
         "path": "/tab-container",
-        "name": "TabContainer",
-        "icon": "panel"
+        "name": "TabContainer"
       },
       {
         "path": "/search",
-        "name": "Search",
-        "icon": "searchbar"
+        "name": "Search"
       },
       {
         "path": "/image",
-        "name": "Image",
-        "icon": "image"
+        "name": "Image"
       },
       {
-        "path": "/image-preview",
-        "name": "ImagePreview",
-        "icon": "image-preview"
+        "path": "/notice-bar",
+        "name": "Notice Bar"
+      },
+      {
+        "path": "/sticky",
+        "name": "Sticky"
       }
     ]
   },
@@ -159,28 +138,23 @@
     "list": [
       {
         "path": "/switch",
-        "name": "Switch",
-        "icon": "switch"
+        "name": "Switch"
       },
       {
         "path": "/checklist",
-        "name": "Checklist",
-        "icon": "checklist"
+        "name": "Checklist"
       },
       {
         "path": "/radio",
-        "name": "Radio",
-        "icon": "radio"
+        "name": "Radio"
       },
       {
         "path": "/field",
-        "name": "Field",
-        "icon": "field"
+        "name": "Field"
       },
       {
         "path": "/badge",
-        "name": "Badge",
-        "icon": "badge"
+        "name": "Badge"
       }
     ]
   }

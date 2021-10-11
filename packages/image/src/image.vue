@@ -1,6 +1,7 @@
 <template>
   <div
     class="zmbl-image"
+    :class="{'zmbl-image--round': round}"
     :style="style"
     @click="onClick"
   >
