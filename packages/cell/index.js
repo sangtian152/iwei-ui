@@ -1,1 +1,3 @@
-export { default } from './src/cell.vue';
+import Cell from './src/cell';
+Cell.install = (Vue) => Vue.component(Cell.name, Cell);
+export default Cell;

@@ -1,12 +1,15 @@
 import Vue from 'vue';
 import App from './app';
 import routes from './route';
-import { install as Mint } from 'src/index';
+import { install as Mint } from 'zmbl-ui';
+import 'zmbl-ui/lib/index/style.css'
 import VueRouter from 'vue-router';
-
+// import { Popper, Button } from 'zmbl-ui';
 document.addEventListener('DOMContentLoaded', function() {
   if (window.FastClick) window.FastClick.attach(document.body);
 }, false);
+// Vue.use(Popper);
+// Vue.use(Button);
 Vue.use(Mint);
 Vue.use(VueRouter);
 

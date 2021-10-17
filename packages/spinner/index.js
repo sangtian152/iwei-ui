@@ -1,1 +1,3 @@
-export { default } from './src/spinner';
+import Spinner from './src/spinner';
+Spinner.install = (Vue) => Vue.component(Spinner.name, Spinner);
+export default Spinner;

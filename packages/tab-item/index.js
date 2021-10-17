@@ -1,1 +1,3 @@
-export { default } from './src/tab-item.vue';
+import TabItem from './src/tab-item';
+TabItem.install = (Vue) => Vue.component(TabItem.name, TabItem);
+export default TabItem;

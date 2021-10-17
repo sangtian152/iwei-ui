@@ -34,7 +34,7 @@
     </Popup>
   </transition>
 </template>
-<style lang="scss" scoped>
+<style lang="scss">
 .zmbl-image-preview {
   width: 100%;
   height: 100%;

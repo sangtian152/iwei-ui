@@ -1,0 +1,12 @@
+{
+  "presets": ["@vue/app", ["@babel/preset-env", { "modules": false }]],
+  "plugins": [
+    [
+      "import",
+      {
+        "libraryName": "demo-vuecli3-ui",
+        "style": true
+      }
+    ]
+  ]
+}

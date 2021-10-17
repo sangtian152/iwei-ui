@@ -1,0 +1,1 @@
+.zmbl-navbar{background-color:#fff;display:flex;text-align:center}.zmbl-navbar.is-fixed{position:fixed;right:0;left:0;top:0;z-index:1}.zmbl-navbar .zmbl-tab-item{padding:17px 0;font-size:15px}.zmbl-navbar .zmbl-tab-item:last-child{border-right:0}.zmbl-navbar .zmbl-tab-item.is-selected{border-bottom:3px solid #26a2ff;color:#26a2ff;margin-bottom:-3px}

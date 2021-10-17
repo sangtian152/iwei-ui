@@ -1,2 +1,3 @@
-import 'zmbl-ui/src/style/empty.css';
-export { default } from '../swipe/src/swipe-item.vue';
+import { SwipeItem } from 'zmbl-ui/packages/swipe';
+SwipeItem.install = (Vue) => Vue.component(SwipeItem.name, SwipeItem);
+export default SwipeItem;

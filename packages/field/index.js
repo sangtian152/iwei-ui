@@ -1,1 +1,3 @@
-export { default } from './src/field.vue';
+import Field from './src/field';
+Field.install = (Vue) => Vue.component(Field.name, Field);
+export default Field;
