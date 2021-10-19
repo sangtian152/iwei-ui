@@ -14,6 +14,11 @@ module.exports = {
           libraryExport: 'default',
           library: 'zmbl-ui',
         },
+        // 从输出的 bundle 中排除依赖
+        externals: {
+            vue: 'Vue',
+            'vue-router':'VueRouter',
+        },
         resolve: pub.resolve
     },
     css: {

@@ -33,8 +33,10 @@
     "array-find-index": "^1.0.2",
     "core-js": "^3.6.5",
     "raf.js": "^0.0.4",
-    "vue": "^2.6.11",
     "vue-lazyload": "^1.3.3"
+  },
+  "peerDependencies": {
+    "vue": "^2.6.12"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
@@ -58,6 +60,7 @@
     "terser-webpack-plugin": "^5.2.4",
     "transliteration": "^2.1.11",
     "uppercamelcase": "^3.0.0",
+    "vue": "^2.6.12",
     "vue-router": "^3.4.8",
     "vue-template-compiler": "^2.6.12"
   },
