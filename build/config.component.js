@@ -3,20 +3,18 @@ const pub = require('./config.pub')
 const Components = require('../components.json');
 const dependencies = require('../package.json').dependencies;
 const externals = {};
-const pkg = {};
 Object.keys(Components).forEach(function(key) {
   externals[`zmbl-ui/packages/${key}/index.js`] = `zmbl-ui/lib/${key}`;
   externals[`zmbl-ui/packages/${key}/style.css`] = `zmbl-ui/lib/${key}/style.css`;
 });
 Object.keys(dependencies).forEach(function(key) {
   externals[key] = key;
-  pkg[key] = key;
 });
 module.exports = {
     outputDir: resolve('lib'),
+    productionSourceMap: false,
     configureWebpack: {
         entry: {
-          index: resolve('src'),
           ...getComponentEntries('packages'),
         },
         output: {

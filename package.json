@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "author": "zzh",
   "private": false,
-  "main": "lib/index/index.js",
+  "main": "lib/zmbl-ui.common.js",
   "homepage": "https://sangtian152.gitee.io/zm-mobile-ui",
   "files": [
     "lib"
@@ -13,7 +13,7 @@
     "url": "https://gitee.com/sangtian152/zm-mobile-ui.git"
   },
   "keywords": [
-    "zm-mobile-ui",
+    "zmbl-ui",
     "orgchart",
     "vue",
     "mobile-ui",
@@ -27,7 +27,8 @@
     "build:entry": "node build/bin/build-entry",
     "build:demo": "node build/bin/build-demo",
     "lint": "vue-cli-service lint",
-    "build-lib": "vue-cli-service build --target lib --name zm-tree-org --dest lib src/index.js"
+    "build:component": "vue-cli-service build --mode component",
+    "build:lib": "vue-cli-service build --mode common && vue-cli-service build --mode component --no-clean"
   },
   "dependencies": {
     "array-find-index": "^1.0.2",
