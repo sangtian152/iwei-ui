@@ -6,7 +6,7 @@
 
 <script>
 /**
- * mt-navbar
+ * zmbl-navbar
  * @module components/navbar
  * @desc 顶部 tab，依赖 tab-item
  *
@@ -14,21 +14,21 @@
  * @param {*} selected - 返回 item component 传入的 value
  *
  * @example
- * <mt-navbar :selected.sync="selected">
- *   <mt-tab-item value="订单">
+ * <zmbl-navbar :selected.sync="selected">
+ *   <zmbl-tab-item value="订单">
  *     <span slot="label">订单</span>
- *   </mt-tab-item>
- * </mt-navbar>
+ *   </zmbl-tab-item>
+ * </zmbl-navbar>
  *
- * <mt-navbar :selected.sync="selected" fixed>
- *   <mt-tab-item :value="['传入数组', '也是可以的']">
+ * <zmbl-navbar :selected.sync="selected" fixed>
+ *   <zmbl-tab-item :value="['传入数组', '也是可以的']">
  *     <span slot="label">订单</span>
- *   </mt-tab-item>
- * </mt-navbar>
+ *   </zmbl-tab-item>
+ * </zmbl-navbar>
  *
  */
 export default {
-  name: 'mt-navbar',
+  name: 'zmbl-navbar',
 
   props: {
     fixed: Boolean,

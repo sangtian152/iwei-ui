@@ -80,7 +80,7 @@
 
 <script type="text/babel">
   export default {
-    name: 'mt-index-list',
+    name: 'zmbl-index-list',
 
     props: {
       height: Number,

@@ -8,17 +8,17 @@
 
 <script>
 /**
- * mt-switch
+ * zmbl-switch
  * @module components/switch
  * @desc 切换按钮
  * @param {boolean} [value] - 绑定值，支持双向绑定
  * @param {slot} - 显示内容
  *
  * @example
- * <mt-switch v-model="value"></mt-switch>
+ * <zmbl-switch v-model="value"></zmbl-switch>
  */
 export default {
-  name: 'mt-switch',
+  name: 'zmbl-switch',
 
   props: {
     value: Boolean,

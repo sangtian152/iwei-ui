@@ -1,41 +1,41 @@
 <template>
   <div>
-    <mt-header fixed title="固定在顶部"></mt-header>
+    <zmbl-header fixed title="固定在顶部"></zmbl-header>
     <div class="page-header-main">
       <div class="page-title">Header</div>
-      <mt-header title="标题过长会隐藏后面的内容啊哈哈哈哈">
+      <zmbl-header title="标题过长会隐藏后面的内容啊哈哈哈哈">
         <router-link to="/" slot="left">
-          <mt-button icon="back">返回</mt-button>
+          <zmbl-button icon="back">返回</zmbl-button>
         </router-link>
-        <mt-button icon="more" slot="right"></mt-button>
-      </mt-header>
+        <zmbl-button icon="more" slot="right"></zmbl-button>
+      </zmbl-header>
 
-      <mt-header title="多个按钮">
+      <zmbl-header title="多个按钮">
         <router-link to="/" slot="left">
-          <mt-button icon="back">返回</mt-button>
+          <zmbl-button icon="back">返回</zmbl-button>
         </router-link>
-        <mt-button @click="handleClose">关闭</mt-button>
-        <mt-button icon="more" slot="right"></mt-button>
-      </mt-header>
+        <zmbl-button @click="handleClose">关闭</zmbl-button>
+        <zmbl-button icon="more" slot="right"></zmbl-button>
+      </zmbl-header>
 
-      <mt-header title="左侧仅文字">
+      <zmbl-header title="左侧仅文字">
         <router-link to="/" slot="left">
-            <mt-button>返回</mt-button>
+            <zmbl-button>返回</zmbl-button>
           </router-link>
-      </mt-header>
+      </zmbl-header>
 
-      <mt-header title="右侧仅文字">
+      <zmbl-header title="右侧仅文字">
         <router-link to="/" slot="right">
-          <mt-button>分享</mt-button>
+          <zmbl-button>分享</zmbl-button>
         </router-link>
-      </mt-header>
+      </zmbl-header>
 
-      <mt-header title="仅图标">
+      <zmbl-header title="仅图标">
         <router-link to="/" slot="left">
-          <mt-button icon="back"></mt-button>
+          <zmbl-button icon="back"></zmbl-button>
         </router-link>
-        <mt-button slot="right" icon="more"></mt-button>
-      </mt-header>
+        <zmbl-button slot="right" icon="more"></zmbl-button>
+      </zmbl-header>
     </div>
 
   </div>

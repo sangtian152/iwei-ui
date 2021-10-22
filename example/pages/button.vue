@@ -2,40 +2,40 @@
   <div class="page-button">
     <h1 class="page-title">Button</h1>
     <div class="page-button-group">
-      <mt-button size="large">default</mt-button>
-      <mt-button size="large" type="primary">primary</mt-button>
-      <mt-button size="large" type="danger">danger</mt-button>
+      <zmbl-button size="large">default</zmbl-button>
+      <zmbl-button size="large" type="primary">primary</zmbl-button>
+      <zmbl-button size="large" type="danger">danger</zmbl-button>
     </div>
 
     <div class="page-button-group">
-      <mt-button>default</mt-button>
-      <mt-button type="primary">primary</mt-button>
-      <mt-button type="danger">danger</mt-button>
+      <zmbl-button>default</zmbl-button>
+      <zmbl-button type="primary">primary</zmbl-button>
+      <zmbl-button type="danger">danger</zmbl-button>
     </div>
 
     <div class="page-button-group">
-      <mt-button size="small">default</mt-button>
-      <mt-button size="small" type="primary">primary</mt-button>
-      <mt-button size="small" type="danger">danger</mt-button>
+      <zmbl-button size="small">default</zmbl-button>
+      <zmbl-button size="small" type="primary">primary</zmbl-button>
+      <zmbl-button size="small" type="danger">danger</zmbl-button>
     </div>
 
     <div class="page-button-group">
-      <mt-button disabled size="large">default</mt-button>
-      <mt-button disabled size="large" type="primary">primary</mt-button>
-      <mt-button disabled size="large" type="danger">danger</mt-button>
+      <zmbl-button disabled size="large">default</zmbl-button>
+      <zmbl-button disabled size="large" type="primary">primary</zmbl-button>
+      <zmbl-button disabled size="large" type="danger">danger</zmbl-button>
     </div>
 
     <div class="page-button-group">
-      <mt-button plain size="large">default</mt-button>
-      <mt-button plain size="large" type="primary">primary</mt-button>
-      <mt-button plain size="large" type="danger">danger</mt-button>
+      <zmbl-button plain size="large">default</zmbl-button>
+      <zmbl-button plain size="large" type="primary">primary</zmbl-button>
+      <zmbl-button plain size="large" type="danger">danger</zmbl-button>
     </div>
 
     <div class="page-button-group">
-      <mt-button>
+      <zmbl-button>
         <img src="../assets/100x100.png" height="20" width="20" slot="icon">
         带自定义图标
-      </mt-button>
+      </zmbl-button>
     </div>
   </div>
 </template>

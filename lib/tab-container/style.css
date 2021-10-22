@@ -1,1 +1,2 @@
-.zmbl-tab-container{overflow:hidden;position:relative}.zmbl-tab-container-wrap{display:flex}.zmbl-tab-container .swipe-transition{transition:transform .15s ease-in-out}
+.zmbl-tab-container{overflow:hidden;position:relative}.zmbl-tab-container-wrap{display:flex}.zmbl-tab-container .swipe-transition{transition:transform 150ms ease-in-out}
+

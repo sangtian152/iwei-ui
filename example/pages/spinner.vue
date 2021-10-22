@@ -2,21 +2,21 @@
   <div class="page-spinner">
     <div class="page-title">Spinner</div>
 
-    <mt-cell title="snake">
-      <mt-spinner color="#26a2ff" type="snake"></mt-spinner>
-    </mt-cell>
+    <zmbl-cell title="snake">
+      <zmbl-spinner color="#26a2ff" type="snake"></zmbl-spinner>
+    </zmbl-cell>
 
-    <mt-cell title="double-bounce">
-      <mt-spinner color="#26a2ff" type="double-bounce"></mt-spinner>
-    </mt-cell>
+    <zmbl-cell title="double-bounce">
+      <zmbl-spinner color="#26a2ff" type="double-bounce"></zmbl-spinner>
+    </zmbl-cell>
 
-    <mt-cell title="triple-bounce">
-      <mt-spinner color="#26a2ff" type="triple-bounce"></mt-spinner>
-    </mt-cell>
+    <zmbl-cell title="triple-bounce">
+      <zmbl-spinner color="#26a2ff" type="triple-bounce"></zmbl-spinner>
+    </zmbl-cell>
 
-    <mt-cell title="fading-circle">
-      <mt-spinner color="#26a2ff" type="fading-circle"></mt-spinner>
-    </mt-cell>
+    <zmbl-cell title="fading-circle">
+      <zmbl-spinner color="#26a2ff" type="fading-circle"></zmbl-spinner>
+    </zmbl-cell>
   </div>
 </template>
 

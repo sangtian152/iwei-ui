@@ -57,7 +57,7 @@
 </style>
 <script>
   export default {
-    name: 'mt-toast',
+    name: 'zmbl-toast',
     props: {
       message: String,
       className: {

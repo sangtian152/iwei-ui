@@ -4,36 +4,36 @@
 
     <div class="page-badge-container">
       <div class="page-part">
-        <mt-badge type="primary" size="large">30</mt-badge>
-        <mt-badge type="error" size="large">10</mt-badge>
-        <mt-badge type="success" size="large">10</mt-badge>
-        <mt-badge type="warning" size="large">10</mt-badge>
+        <zmbl-badge type="primary" size="large">30</zmbl-badge>
+        <zmbl-badge type="error" size="large">10</zmbl-badge>
+        <zmbl-badge type="success" size="large">10</zmbl-badge>
+        <zmbl-badge type="warning" size="large">10</zmbl-badge>
       </div>
 
       <div class="page-part">
-        <mt-badge type="primary">30</mt-badge>
-        <mt-badge type="error">10</mt-badge>
-        <mt-badge type="success">10</mt-badge>
-        <mt-badge type="warning">10</mt-badge>
+        <zmbl-badge type="primary">30</zmbl-badge>
+        <zmbl-badge type="error">10</zmbl-badge>
+        <zmbl-badge type="success">10</zmbl-badge>
+        <zmbl-badge type="warning">10</zmbl-badge>
       </div>
 
       <div class="page-part">
-        <mt-badge type="primary" size="small">30</mt-badge>
-        <mt-badge type="error" size="small">10</mt-badge>
-        <mt-badge type="success" size="small">10</mt-badge>
-        <mt-badge type="warning" size="small">10</mt-badge>
+        <zmbl-badge type="primary" size="small">30</zmbl-badge>
+        <zmbl-badge type="error" size="small">10</zmbl-badge>
+        <zmbl-badge type="success" size="small">10</zmbl-badge>
+        <zmbl-badge type="warning" size="small">10</zmbl-badge>
       </div>
 
       <div class="page-part">
-        <mt-badge size="small" color="#888">自定义颜色</mt-badge>
+        <zmbl-badge size="small" color="#888">自定义颜色</zmbl-badge>
       </div>
     </div>
 
     <div class="page-part">
-      <mt-cell title="徽章">
+      <zmbl-cell title="徽章">
         <span style="margin-right: 5px;">未读消息</span>
-        <mt-badge type="error" size="small">10</mt-badge>
-      </mt-cell>
+        <zmbl-badge type="error" size="small">10</zmbl-badge>
+      </zmbl-cell>
     </div>
   </div>
 </template>

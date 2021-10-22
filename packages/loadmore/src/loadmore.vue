@@ -59,7 +59,7 @@
 <script type="text/babel">
   import spinner from 'zmbl-ui/packages/spinner/src/spinner/fading-circle.vue';
   export default {
-    name: 'mt-loadmore',
+    name: 'zmbl-loadmore',
     components: {
       'spinner': spinner
     },

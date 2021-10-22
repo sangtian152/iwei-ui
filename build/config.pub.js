@@ -7,6 +7,7 @@ module.exports = {
       'src': utils.resolve('src'),
       'zmbl-ui': utils.resolve('./'),
       'example': utils.resolve('example'),
-    }
+    },
+    modules: ['node_modules']
   },
 }

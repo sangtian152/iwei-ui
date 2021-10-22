@@ -60,12 +60,12 @@ if (process.env.NODE_ENV === 'component') {
 }
 
 /**
- * mt-cell-swipe
+ * zmbl-cell-swipe
  * @desc 类似 iOS 滑动 Cell 的效果
  * @module components/cell-swipe
  *
  * @example
- * <mt-cell-swipe
+ * <zmbl-cell-swipe
  *   :left=[
  *     {
  *       content: 'text',
@@ -75,10 +75,10 @@ if (process.env.NODE_ENV === 'component') {
  *   ]
  *   :right=[{ content: 'allowed HTML' }]>
  *   swipe me
- * </mt-cell-swipe>
+ * </zmbl-cell-swipe>
  */
 export default {
-  name: 'mt-cell-swipe',
+  name: 'zmbl-cell-swipe',
 
   components: { XCell },
 

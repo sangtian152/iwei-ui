@@ -23,7 +23,7 @@
 
   import Popup from 'zmbl-ui/src/mixins/popup';
   export default {
-    name: 'mt-dialog',
+    name: 'zmbl-dialog',
     mixins: [ Popup ],
 
     props: {

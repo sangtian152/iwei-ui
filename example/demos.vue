@@ -2,7 +2,7 @@
   <section class="page-demo">
     <div v-for="(group, index) in navs" :key="index">
       <div class="page-title" v-text="group.title"></div>
-      <mt-cell
+      <zmbl-cell
         v-for="item in group.list"
         :key="item.path"
         :to="item.path"
@@ -10,7 +10,7 @@
         <div slot="title">
           <span>{{ item.name }}</span>
         </div>
-      </mt-cell>
+      </zmbl-cell>
     </div>
   </section>
 </template>

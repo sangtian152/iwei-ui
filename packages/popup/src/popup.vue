@@ -86,7 +86,7 @@
   }
 
   export default {
-    name: 'mt-popup',
+    name: 'zmbl-popup',
 
     mixins: [Popup, CloseOnPopstateMixin],
 

@@ -9,7 +9,7 @@
 
 <script>
 /**
- * mt-tab-item
+ * zmbl-tab-item
  * @module components/tab-item
  * @desc 搭配 tabbar 或 navbar 使用
  * @param {*} id - 选中后的返回值，任意类型
@@ -17,13 +17,13 @@
  * @param {slot} - 文字
  *
  * @example
- * <mt-tab-item>
+ * <zmbl-tab-item>
  *   <img slot="icon" src="http://placehold.it/100x100">
  *   订单
- * </mt-tab-item>
+ * </zmbl-tab-item>
  */
 export default {
-  name: 'mt-tab-item',
+  name: 'zmbl-tab-item',
 
   props: ['id']
 };

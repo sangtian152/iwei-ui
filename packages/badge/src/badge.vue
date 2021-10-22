@@ -9,7 +9,7 @@
 
 <script>
 /**
- * mt-badge
+ * zmbl-badge
  * @module components/badge
  * @desc 徽章
  * @param {string} [type=primary] 组件样式，可选 primary, error, success, warning
@@ -17,11 +17,11 @@
  * @param {string} [size=normal] - 尺寸，接受 normal, small, large
  *
  * @example
- * <mt-badge color="error">错误</mt-badge>
- * <mt-badge color="#333">30</mt-badge>
+ * <zmbl-badge color="error">错误</zmbl-badge>
+ * <zmbl-badge color="#333">30</zmbl-badge>
  */
 export default {
-  name: 'mt-badge',
+  name: 'zmbl-badge',
 
   props: {
     color: String,

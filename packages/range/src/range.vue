@@ -1,10 +1,10 @@
 <template>
-  <div class="mt-range" :class="{ 'mt-range--disabled': disabled }">
+  <div class="zmbl-range" :class="{ 'zmbl-range--disabled': disabled }">
     <slot name="start"></slot>
-    <div class="mt-range-content" ref="content">
-      <div class="mt-range-runway" :style="{ 'border-top-width': barHeight + 'px' }"></div>
-      <div class="mt-range-progress" :style="{ width: progress + '%', height: barHeight + 'px' }"></div>
-      <div class="mt-range-thumb" ref="thumb" :style="{ left: progress + '%' }"></div>
+    <div class="zmbl-range-content" ref="content">
+      <div class="zmbl-range-runway" :style="{ 'border-top-width': barHeight + 'px' }"></div>
+      <div class="zmbl-range-progress" :style="{ width: progress + '%', height: barHeight + 'px' }"></div>
+      <div class="zmbl-range-thumb" ref="thumb" :style="{ left: progress + '%' }"></div>
     </div>
     <slot name="end"></slot>
   </div>
@@ -79,7 +79,7 @@
   import draggable from './draggable';
 
   export default {
-    name: 'mt-range',
+    name: 'zmbl-range',
 
     props: {
       min: {

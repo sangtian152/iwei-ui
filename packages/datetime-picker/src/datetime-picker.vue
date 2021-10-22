@@ -1,5 +1,5 @@
 <template>
-  <mt-popup v-model="visible" :closeOnClickModal="closeOnClickModal" position="bottom" class="zmbl-datetime">
+  <zmbl-popup v-model="visible" :closeOnClickModal="closeOnClickModal" position="bottom" class="zmbl-datetime">
     <slot name="header"></slot>
     <div class="picker-toolbar" v-if="showToolbar">
       <slot name="tool-bar">
@@ -7,15 +7,15 @@
         <span class="zmbl-datetime-action zmbl-datetime-confirm" @click="confirm">{{ confirmText }}</span>
       </slot>
     </div>
-    <mt-picker
+    <zmbl-picker
       :slots="dateSlots"
       @change="onChange"
       :visible-item-count="visibleItemCount"
       class="zmbl-datetime-picker"
       ref="picker">
-    </mt-picker>
+    </zmbl-picker>
     <slot name="footer"></slot>
-  </mt-popup>
+  </zmbl-popup>
 </template>
 
 <style lang="scss">
@@ -70,7 +70,7 @@
   };
 
   export default {
-    name: 'mt-datetime-picker',
+    name: 'zmbl-datetime-picker',
 
     props: {
       cancelText: {
@@ -160,8 +160,8 @@
     },
 
     components: {
-      'mt-picker': picker,
-      'mt-popup': popup
+      'zmbl-picker': picker,
+      'zmbl-popup': popup
     },
 
     methods: {

@@ -8,21 +8,21 @@
 
 <script>
 /**
- * mt-tab-container-item
+ * zmbl-tab-container-item
  * @desc 搭配 tab-container 使用
  * @module components/tab-container-item
  *
  * @param {number|string} [id] - 该项的 id
  *
  * @example
- * <mt-tab-container v-model="selected">
- *   <mt-tab-container-item id="1"> 内容A </mt-tab-container-item>
- *   <mt-tab-container-item id="2"> 内容B </mt-tab-container-item>
- *   <mt-tab-container-item id="3"> 内容C </mt-tab-container-item>
- * </mt-tab-container>
+ * <zmbl-tab-container v-model="selected">
+ *   <zmbl-tab-container-item id="1"> 内容A </zmbl-tab-container-item>
+ *   <zmbl-tab-container-item id="2"> 内容B </zmbl-tab-container-item>
+ *   <zmbl-tab-container-item id="3"> 内容C </zmbl-tab-container-item>
+ * </zmbl-tab-container>
  */
 export default {
-  name: 'mt-tab-container-item',
+  name: 'zmbl-tab-container-item',
 
   props: ['id']
 };

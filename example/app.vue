@@ -1,17 +1,17 @@
 <template>
   <div class="page">
-    <router-link class="page-back" v-if="visible" :to="'/'">
+    <!-- <router-link class="page-back" v-if="visible" :to="'/'">
       <i class="zmblui zmblui-back"></i>
     </router-link>
-    <router-view></router-view>
-    <!-- <zmbl-popper
+    <router-view></router-view> -->
+    <zmbl-popper
         placement="top-start"
         title="标题"
         width="200"
         trigger="click"
         content="这是一段内容,这是一段内容,这是一段内容,这是一段内容。">
-        <mt-button type="primary" slot="reference">click 激活</mt-button>
-      </zmbl-popper> -->
+        <zmbl-button type="primary" slot="reference">click 激活</zmbl-button>
+      </zmbl-popper>
   </div>
 </template>
 

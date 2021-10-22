@@ -35,7 +35,7 @@ if (process.env.NODE_ENV === 'component') {
 }
 
 /**
- * mt-search
+ * zmbl-search
  * @module components/search
  * @desc 搜索框
  * @param {string} value - 绑定值
@@ -47,13 +47,13 @@ if (process.env.NODE_ENV === 'component') {
  * @param {slot} 结果列表
  *
  * @example
- * <mt-search :value.sync="value" :result.sync="result"></mt-search>
- * <mt-search :value.sync="value">
- *   <mt-cell v-for="item in result" :title="item"></mt-cell>
- * </mt-search>
+ * <zmbl-search :value.sync="value" :result.sync="result"></zmbl-search>
+ * <zmbl-search :value.sync="value">
+ *   <zmbl-cell v-for="item in result" :title="item"></zmbl-cell>
+ * </zmbl-search>
  */
 export default {
-  name: 'mt-search',
+  name: 'zmbl-search',
 
   data() {
     return {

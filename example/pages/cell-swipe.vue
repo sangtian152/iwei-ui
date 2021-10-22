@@ -1,12 +1,12 @@
 <template>
   <div class="page-cell">
     <div class="page-title">Cell Swipe</div>
-    <mt-cell-swipe
+    <zmbl-cell-swipe
       v-for="n in 15"
       :key="n"
       :right="rightButtons"
       title="swipe me">
-    </mt-cell-swipe>
+    </zmbl-cell-swipe>
   </div>
 </template>
 

@@ -67,7 +67,7 @@
   import { addClass, removeClass } from 'zmbl-ui/src/utils/dom';
 
   export default {
-    name: 'mt-swipe',
+    name: 'zmbl-swipe',
 
     created() {
       this.dragState = {};

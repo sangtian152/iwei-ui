@@ -55,7 +55,7 @@ if (process.env.NODE_ENV === 'component') {
 }
 
 /**
- * mt-field
+ * zmbl-field
  * @desc 编辑器，依赖 cell
  * @module components/field
  *
@@ -68,13 +68,13 @@ if (process.env.NODE_ENV === 'component') {
  * @param {string} [state] - 表单校验状态样式，接受 error, warning, success
  *
  * @example
- * <mt-field v-model="value" label="用户名"></mt-field>
- * <mt-field v-model="value" label="密码" placeholder="请输入密码"></mt-field>
- * <mt-field v-model="value" label="自我介绍" placeholder="自我介绍" type="textarea" rows="4"></mt-field>
- * <mt-field v-model="value" label="邮箱" placeholder="成功状态" state="success"></mt-field>
+ * <zmbl-field v-model="value" label="用户名"></zmbl-field>
+ * <zmbl-field v-model="value" label="密码" placeholder="请输入密码"></zmbl-field>
+ * <zmbl-field v-model="value" label="自我介绍" placeholder="自我介绍" type="textarea" rows="4"></zmbl-field>
+ * <zmbl-field v-model="value" label="邮箱" placeholder="成功状态" state="success"></zmbl-field>
  */
 export default {
-  name: 'mt-field',
+  name: 'zmbl-field',
 
   data() {
     return {

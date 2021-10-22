@@ -1,9 +1,9 @@
 <template>
-  <div class="mt-progress">
+  <div class="zmbl-progress">
     <slot name="start"></slot>
-    <div class="mt-progress-content">
-      <div class="mt-progress-runway" :style="{ height: barHeight + 'px' }"></div>
-      <div class="mt-progress-progress" :style="{ width: value + '%', height: barHeight + 'px' }"></div>
+    <div class="zmbl-progress-content">
+      <div class="zmbl-progress-runway" :style="{ height: barHeight + 'px' }"></div>
+      <div class="zmbl-progress-progress" :style="{ width: value + '%', height: barHeight + 'px' }"></div>
     </div>
     <slot name="end"></slot>
   </div>
@@ -59,7 +59,7 @@
 
 <script type="text/ecmascript-6">
   export default {
-    name: 'mt-progress',
+    name: 'zmbl-progress',
 
     props: {
       value: Number,

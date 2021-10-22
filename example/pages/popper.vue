@@ -8,7 +8,7 @@
         width="200"
         trigger="click"
         content="这是一段内容,这是一段内容,这是一段内容,这是一段内容。">
-        <mt-button type="primary" slot="reference">click 激活</mt-button>
+        <zmbl-button type="primary" slot="reference">click 激活</zmbl-button>
       </zmbl-popper>
       <zmbl-popper
         placement="top-start"

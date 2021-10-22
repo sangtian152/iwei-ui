@@ -3,11 +3,11 @@
     <h1 class="page-title">Index List</h1>
     <p class="page-indexlist-desc">此例请使用手机查看</p>
     <div class="page-indexlist-wrapper">
-      <mt-index-list>
-        <mt-index-section v-for="item in alphabet" :key="item.initial" :index="item.initial">
-          <mt-cell v-for="cell in item.cells" :title="cell" :key="cell"></mt-cell>
-        </mt-index-section>
-      </mt-index-list>
+      <zmbl-index-list>
+        <zmbl-index-section v-for="item in alphabet" :key="item.initial" :index="item.initial">
+          <zmbl-cell v-for="cell in item.cells" :title="cell" :key="cell"></zmbl-cell>
+        </zmbl-index-section>
+      </zmbl-index-list>
     </div>
   </div>
 </template>

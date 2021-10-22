@@ -2,7 +2,7 @@
   <div class="page-image-preview">
     <h1 class="page-title">ImagePreview</h1>
     <div class="button">
-      <mt-button type="primary" @click="showImagePreview">点击打开dialog</mt-button>
+      <zmbl-button type="primary" @click="showImagePreview">点击打开dialog</zmbl-button>
     </div>
     <zmbl-image-preview v-model="show" :images="images" closeable @change="onChange">
       <span name="index" slot-scope="{index}">{{index}}</span>

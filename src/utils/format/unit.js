@@ -1,5 +1,5 @@
-import { isDefined, inBrowser } from '../util';
-import { isNumeric } from '../types';
+import { inBrowser } from '../util';
+import { isDefined, isNumeric } from '../types';
 
 export function addUnit(value) {
   if (!isDefined(value)) {

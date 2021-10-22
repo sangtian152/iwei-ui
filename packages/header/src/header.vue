@@ -14,7 +14,7 @@
 
 <script>
 /**
- * mt-header
+ * zmbl-header
  * @module components/header
  * @desc 顶部导航
  * @param {boolean} [fixed=false] - 固定顶部
@@ -23,13 +23,13 @@
  * @param {slot} [right] - 显示在右侧区域
  *
  * @example
- * <mt-header title="我是标题" fixed>
- *   <mt-button slot="left" icon="back" @click="handleBack">返回</mt-button>
- *   <mt-button slot="right" icon="more"></mt-button>
- * </mt-header>
+ * <zmbl-header title="我是标题" fixed>
+ *   <zmbl-button slot="left" icon="back" @click="handleBack">返回</zmbl-button>
+ *   <zmbl-button slot="right" icon="more"></zmbl-button>
+ * </zmbl-header>
  */
 export default {
-  name: 'mt-header',
+  name: 'zmbl-header',
 
   props: {
     fixed: Boolean,

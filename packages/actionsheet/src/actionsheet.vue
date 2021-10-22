@@ -60,7 +60,7 @@
   import 'zmbl-ui/src/style/popup.css';
 
   export default {
-    name: 'mt-actionsheet',
+    name: 'zmbl-actionsheet',
 
     mixins: [Popup],
 

@@ -23,7 +23,7 @@ if (process.env.NODE_ENV === 'component') {
 }
 
 /**
- * mt-header
+ * zmbl-header
  * @module components/button
  * @desc 按钮
  * @param {string} [type=default] - 显示类型，接受 default, primary, danger
@@ -36,10 +36,10 @@ if (process.env.NODE_ENV === 'component') {
  * @param {slot} [icon] 显示图标
  *
  * @example
- * <mt-button size="large" icon="back" type="primary">按钮</mt-button>
+ * <zmbl-button size="large" icon="back" type="primary">按钮</zmbl-button>
  */
 export default {
-  name: 'mt-button',
+  name: 'zmbl-button',
 
   methods: {
     handleClick(evt) {

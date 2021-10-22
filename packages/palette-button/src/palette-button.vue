@@ -12,7 +12,7 @@
 
 <script>
   export default {
-    name: 'mt-palette-button',
+    name: 'zmbl-palette-button',
 
     data: function() {
       return {

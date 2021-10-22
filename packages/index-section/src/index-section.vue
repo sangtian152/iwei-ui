@@ -28,7 +28,7 @@
 
 <script type="text/babel">
   export default {
-    name: 'mt-index-section',
+    name: 'zmbl-index-section',
 
     props: {
       index: {

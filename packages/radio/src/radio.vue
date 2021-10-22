@@ -26,7 +26,7 @@ if (process.env.NODE_ENV === 'component') {
   require('zmbl-ui/packages/cell/style.css');
 }
 /**
- * mt-radio
+ * zmbl-radio
  * @module components/radio
  * @desc 单选框列表，依赖 cell 组件
  *
@@ -36,10 +36,10 @@ if (process.env.NODE_ENV === 'component') {
  * @param {string} [align=left] - checkbox 对齐位置，`left`, `right`
  *
  * @example
- * <mt-radio v-model="value" :options="['a', 'b', 'c']"></mt-radio>
+ * <zmbl-radio v-model="value" :options="['a', 'b', 'c']"></zmbl-radio>
  */
 export default {
-  name: 'mt-radio',
+  name: 'zmbl-radio',
 
   props: {
     title: String,

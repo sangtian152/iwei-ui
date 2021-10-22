@@ -21,7 +21,7 @@ Vue.use(Spinner);
 ```
 
 ```html
-<mt-spinner></mt-spinner>
+<zmbl-spinner></zmbl-spinner>
 ```
 
 import one spinner
@@ -73,17 +73,17 @@ Vue.component(DoubleBounce.name, DoubleBounce);
 - type: String|Number
 
 ```html
-<mt-spinner :type="0"></mt-spinner>
-<mt-spinner type="snake"></mt-spinner>
+<zmbl-spinner :type="0"></zmbl-spinner>
+<zmbl-spinner type="snake"></zmbl-spinner>
 
-<mt-spinner :type="1"></mt-spinner>
-<mt-spinner type="double-bounce"></mt-spinner>
+<zmbl-spinner :type="1"></zmbl-spinner>
+<zmbl-spinner type="double-bounce"></zmbl-spinner>
 
-<mt-spinner :type="2"></mt-spinner>
-<mt-spinner type="triple-bounce"></mt-spinner>
+<zmbl-spinner :type="2"></zmbl-spinner>
+<zmbl-spinner type="triple-bounce"></zmbl-spinner>
 
-<mt-spinner :type="3"></mt-spinner>
-<mt-spinner type="fading-circle"></mt-spinner>
+<zmbl-spinner :type="3"></zmbl-spinner>
+<zmbl-spinner type="fading-circle"></zmbl-spinner>
 ```
 
 ## Development

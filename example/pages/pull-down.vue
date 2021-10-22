@@ -8,17 +8,17 @@
       translateScale : {{ moveTranslate }} 
     </div>
     <div class="page-loadmore-wrapper" ref="wrapper" :style="{ height: wrapperHeight + 'px' }">
-      <mt-loadmore :top-method="loadTop" @translate-change="translateChange" @top-status-change="handleTopChange" ref="loadmore">
+      <zmbl-loadmore :top-method="loadTop" @translate-change="translateChange" @top-status-change="handleTopChange" ref="loadmore">
         <ul class="page-loadmore-list">
           <li v-for="item in list" class="page-loadmore-listitem" :key="item">{{ item }}</li>
         </ul>
         <div slot="top" class="zmbl-loadmore-top">
           <span v-show="topStatus !== 'loading'" :class="{ 'is-rotate': topStatus === 'drop' }">↓</span>
           <span v-show="topStatus === 'loading'">
-            <mt-spinner type="snake"></mt-spinner>
+            <zmbl-spinner type="snake"></zmbl-spinner>
           </span>
         </div>
-      </mt-loadmore>
+      </zmbl-loadmore>
     </div>
   </div>
 </template>

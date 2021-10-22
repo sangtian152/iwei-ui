@@ -34,24 +34,23 @@
 
 <script>
 import { once } from 'zmbl-ui/src/utils/dom';
-import arrayFindIndex from 'array-find-index';
 
 /**
- * mt-tab-container
+ * zmbl-tab-container
  * @desc 面板，搭配 tab-container-item 使用
  * @module components/tab-container
  *
  * @param {number|string} [value] - 当前激活的 tabId
  *
  * @example
- * <mt-tab-container v-model="selected">
- *   <mt-tab-container-item id="1"> 内容A </mt-tab-container-item>
- *   <mt-tab-container-item id="2"> 内容B </mt-tab-container-item>
- *   <mt-tab-container-item id="3"> 内容C </mt-tab-container-item>
- * </mt-tab-container>
+ * <zmbl-tab-container v-model="selected">
+ *   <zmbl-tab-container-item id="1"> 内容A </zmbl-tab-container-item>
+ *   <zmbl-tab-container-item id="2"> 内容B </zmbl-tab-container-item>
+ *   <zmbl-tab-container-item id="3"> 内容C </zmbl-tab-container-item>
+ * </zmbl-tab-container>
  */
 export default {
-  name: 'mt-tab-container',
+  name: 'zmbl-tab-container',
 
   props: {
     value: {},
@@ -76,8 +75,7 @@ export default {
     currentActive(val, oldValue) {
       this.$emit('input', val);
       if (!this.swipeable) return;
-      const lastIndex = arrayFindIndex(this.$children,
-        item => item.id === oldValue);
+      const lastIndex = this.$children.findIndex(item => item.id === oldValue);
       this.swipeLeaveTransition(lastIndex);
     }
   },

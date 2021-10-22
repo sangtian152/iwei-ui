@@ -28,7 +28,7 @@
 import { isDefined } from 'zmbl-ui/src/utils/types';
 import { addUnit, inBrowser } from 'zmbl-ui/src/utils/util';
 export default {
-  name: 'mt-image',
+  name: 'zmbl-image',
   props: {
     src: String,
     fit: String,

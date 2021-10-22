@@ -6,7 +6,7 @@
 
 <script>
   export default {
-    name: 'mt-swipe-item',
+    name: 'zmbl-swipe-item',
 
     mounted() {
       this.$parent && this.$parent.swipeItemCreated(this);

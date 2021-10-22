@@ -28,7 +28,7 @@ if (process.env.NODE_ENV === 'component') {
 }
 
 /**
- * mt-checklist
+ * zmbl-checklist
  * @module components/checklist
  * @desc 复选框列表，依赖 cell 组件
  *
@@ -40,10 +40,10 @@ if (process.env.NODE_ENV === 'component') {
  *
  *
  * @example
- * <mt-checklist :v-model="value" :options="['a', 'b', 'c']"></mt-checklist>
+ * <zmbl-checklist :v-model="value" :options="['a', 'b', 'c']"></zmbl-checklist>
  */
 export default {
-  name: 'mt-checklist',
+  name: 'zmbl-checklist',
 
   props: {
     min: Number,

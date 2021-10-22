@@ -1,3 +1,6 @@
+// 告诉 Webpack 不要捆绑这些模块或其任何子模块。
+const nodeExternals = require('webpack-node-externals');
+// const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const {resolve, getComponentEntries} = require('./utils')
 const pub = require('./config.pub')
 const Components = require('../components.json');
@@ -24,15 +27,18 @@ module.exports = {
           library: 'zmbl-ui',
         },
         // 从输出的 bundle 中排除依赖
-        externals: Object.assign({
+        externals: [Object.assign({
           vue: {
               root: 'Vue',
               commonjs: 'vue',
               commonjs2: 'vue',
               amd: 'vue'
             }
-          }, externals),
-        resolve: pub.resolve
+          }, externals), nodeExternals()],
+        resolve: pub.resolve,
+        performance: {
+          hints: false
+        },
     },
     css: {
         sourceMap: false,
@@ -48,7 +54,20 @@ module.exports = {
         config.plugins.delete('html')
         config.plugins.delete('hmr')
         config.entryPoints.delete('app')
-
+        config.module
+          .rule('js')
+          .use('babel')
+          .loader('babel-loader')
+          .tap(options => {
+              return options
+          })
+        config.module
+          .rule("vue")
+          .use("vue-loader")
+          .loader("vue-loader")
+          .tap(options => {
+            return options
+          })
         config.module
             .rule('fonts')
             .use('url-loader')

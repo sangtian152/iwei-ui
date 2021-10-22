@@ -1,17 +1,53 @@
 {
-  "presets": ["@vue/app", [
+  "presets": [[
     "@babel/preset-env", 
-    { 
-      "modules": false
+    {
+      "loose": true,
+      "modules": false,
+      "useBuiltIns": "usage",
+      "corejs": 3,
+      "targets": {
+        "browsers": ["> 1%", "last 2 versions", "not ie <= 8"]
+      }
     }
   ]],
-  "plugins": [
+  /* "plugins": [
     [
       "import",
       {
-        "libraryName": "demo-vuecli3-ui",
+        "libraryName": "zmbl-ui",
         "style": true
       }
     ]
-  ]
+  ], */
+  "env": {
+    "development":{
+      "presets": ["@vue/app"]
+    },
+    "utils": {
+      "presets": [
+        [
+          "@babel/preset-env",
+          {
+            "loose": true,
+            "modules": "commonjs",
+            "targets": {
+              "browsers": ["> 1%", "last 2 versions", "not ie <= 8"]
+            }
+          }
+        ]
+      ],
+      "plugins": [
+        ["module-resolver", {
+          "root": ["zmbl-ui"],
+          "alias": {
+            "zmbl-ui/src": "zmbl-ui/lib"
+          }
+        }]
+      ]
+    },
+    "test": {
+      "plugins": ["istanbul"]
+    }
+  }
 }
