@@ -1,18 +1,23 @@
 import NavConfig from './nav.config.json';
+/* Layout */
+import Layout from 'docs/layout'
 
 const registerRoute = (config) => {
   let route = [];
   config.map(nav =>
-    nav.list.map(page =>
+    nav.list.map(page => {
+      const docsPath = page.path.replace('/docs/', '')
+      console.log(docsPath)
       route.push({
-        name: page.name,
+        name: `Docs${page.name}`,
         path: page.path,
-        component: () => import(`./pages${page.path}`),
+        component: () => import(`zmbl-ui/packages/${docsPath}/README.md`),
         meta: {
           title: page.title || page.name,
           description: page.description
         }
       })
+    }
     )
   );
 
@@ -21,10 +26,16 @@ const registerRoute = (config) => {
 
 const route = registerRoute(NavConfig);
 
-route.route.push({
+/* route.route.push({
   path: '/',
   component: () => import('./demos.vue')
-});
-console.log(route, 30)
+}); */
 export const navs = route.navs;
-export default route.route;
+export default [{
+  path: '/',
+  component: () => import('./demos.vue')
+},{
+  path: '/docs',
+  component: Layout,
+  children: route.route
+}];

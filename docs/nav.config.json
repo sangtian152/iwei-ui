@@ -1,0 +1,161 @@
+[
+  {
+    "title": "JS Components",
+    "list": [
+      {
+        "path": "/docs/toast",
+        "name": "Toast"
+      },
+      {
+        "path": "/docs/indicator",
+        "name": "Indicator"
+      },
+      {
+        "path": "/docs/pull-down",
+        "name": "Pull down"
+      },
+      {
+        "path": "/docs/pull-up",
+        "name": "Pull up"
+      },
+      {
+        "path": "/docs/infinite-scroll",
+        "name": "Infinite scroll"
+      },
+      {
+        "path": "/docs/dialog",
+        "name": "Dialog"
+      },
+      {
+        "path": "/docs/message-box",
+        "name": "Message box"
+      },
+      {
+        "path": "/docs/action-sheet",
+        "name": "Action sheet"
+      },
+      {
+        "path": "/docs/popup",
+        "name": "Popup"
+      },
+      {
+        "path": "/docs/popper",
+        "name": "Popper"
+      },
+      {
+        "path": "/docs/swipe",
+        "name": "Swipe"
+      },
+      {
+        "path": "/docs/lazyload",
+        "name": "Lazy load"
+      },
+      {
+        "path": "/docs/range",
+        "name": "Range"
+      },
+      {
+        "path": "/docs/progress",
+        "name": "Progress"
+      },
+      {
+        "path": "/docs/picker",
+        "name": "Picker"
+      },
+      {
+        "path": "/docs/datetime-picker",
+        "name": "Datetime Picker"
+      },
+      {
+        "path": "/docs/index-list",
+        "name": "Index List"
+      },
+      {
+        "path": "/docs/palette-button",
+        "name": "Palette Button"
+      },
+      {
+        "path": "/docs/image-preview",
+        "name": "Image Preview"
+      }
+    ]
+  },
+  {
+    "title": "CSS Components",
+    "list": [
+      {
+        "path": "/docs/header",
+        "name": "Header"
+      },
+      {
+        "path": "/docs/tabbar",
+        "name": "Tabbar"
+      },
+      {
+        "path": "/docs/navbar",
+        "name": "Navbar"
+      },
+      {
+        "path": "/docs/button",
+        "name": "Button"
+      },
+      {
+        "path": "/docs/cell",
+        "name": "Cell"
+      },
+      {
+        "path": "/docs/cell-swipe",
+        "name": "Cell Swipe"
+      },
+      {
+        "path": "/docs/spinner",
+        "name": "Spinner"
+      },
+      {
+        "path": "/docs/tab-container",
+        "name": "TabContainer"
+      },
+      {
+        "path": "/docs/search",
+        "name": "Search"
+      },
+      {
+        "path": "/docs/image",
+        "name": "Image"
+      },
+      {
+        "path": "/docs/notice-bar",
+        "name": "Notice Bar"
+      },
+      {
+        "path": "/docs/sticky",
+        "name": "Sticky"
+      }
+    ]
+  },
+  {
+    "title": "Form Components",
+    "list": [
+      {
+        "path": "/docs/switch",
+        "name": "Switch"
+      },
+      {
+        "path": "/docs/checklist",
+        "name": "Checklist"
+      },
+      {
+        "path": "/docs/radio",
+        "name": "Radio"
+      },
+      {
+        "path": "/docs/field",
+        "name": "Field"
+      },
+      {
+        "path": "/docs/badge",
+        "name": "Badge"
+      }
+    ]
+  }
+]

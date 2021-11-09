@@ -1,41 +1,44 @@
-# Overview
+### Overview
 zmbl-popup is a popup component for vue.js
 
-# Installation
+### Installation
+
 First, install `zmbl-popup` from npm:
-```bash
-$ npm install zmbl-popup
+
+```shell
+npm install zmbl-popup
 ```
 
 Import it:
-```Javascript
-require ('zmbl-popup/lib/index.css');
 
+```javascript
+require ('zmbl-popup/lib/index.css');
 // ES6 mudule
 import Popup from 'zmbl-popup';
-
 // CommonJS
 const Popup = require('zmbl-popup').default;
 ```
 
 Register component:
-```Javascript
+
+```javascript
 Vue.component('popup', Popup);
 ```
 
 Then use it:
+
 ```html
-<popup :visible.sync="popupVisible" position="bottom"></popup>
+<!-- <popup :visible.sync="popupVisible" position="bottom"></popup> -->
 ```
 
-# Usage
+### Usage
 `position` defines the location of the popup. If it's `bottom`, when you switch on the popup, it'll slide into the screen from the bottom and become fixed at the bottom.
 
 If the `position` attribute is omitted, the popup will be located at the center of the viewport (and of course you can relocate it using CSS). In this case, you may want to set its `popup-transition` attribute to `popup-fade` so that it'll have a fading effect when switched on/off.
 
 Sync `visible` with one of your vue instance variables. Toggle it to switch on/off the popup.
 
-# API
+### API
 | Option            | Description                                                 | Value                         | Default       |
 |-------------------|-------------------------------------------------------------|-------------------------------|---------------|
 | visible           | visibility of the popup                                     | Boolean                       | 'false'       |
@@ -44,5 +47,5 @@ Sync `visible` with one of your vue instance variables. Toggle it to switch on/o
 | modal             | determines if a modal pops with the popup                   | Boolean                       | true          |
 | closeOnClickModal | determines if the popup turns off when the modal is clicked | Boolean                       | true          |
 
-# License
+### License
 MIT

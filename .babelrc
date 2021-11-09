@@ -5,10 +5,7 @@
       "loose": true,
       "modules": false,
       "useBuiltIns": "usage",
-      "corejs": 3,
-      "targets": {
-        "browsers": ["> 1%", "last 2 versions", "not ie <= 8"]
-      }
+      "corejs": 3
     }
   ]],
   /* "plugins": [
@@ -16,6 +13,7 @@
       "import",
       {
         "libraryName": "zmbl-ui",
+        // "libraryDirectory": "lib",   // default: lib
         "style": true
       }
     ]
@@ -30,10 +28,7 @@
           "@babel/preset-env",
           {
             "loose": true,
-            "modules": "commonjs",
-            "targets": {
-              "browsers": ["> 1%", "last 2 versions", "not ie <= 8"]
-            }
+            "modules": "commonjs"
           }
         ]
       ],

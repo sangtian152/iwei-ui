@@ -1,19 +1,16 @@
 <template>
   <div class="page">
-    <router-link class="page-back" v-if="visible" :to="'/'">
-      <i class="zmblui zmblui-back"></i>
-    </router-link>
     <router-view></router-view>
-    <!-- <zmbl-popper
-        placement="top-start"
-        title="标题"
-        width="200"
-        trigger="click"
-        content="这是一段内容,这是一段内容,这是一段内容,这是一段内容。">
-        <zmbl-button type="primary" slot="reference">click 激活</zmbl-button>
-      </zmbl-popper> -->
   </div>
 </template>
+<script>
+import 'src/assets/font/iconfont.css';
+export default {
+  data(){
+    return {}
+  }
+}
+</script>
 
 <style lang="scss">
   @import '~example/assets/styles/reset.css';
@@ -53,15 +50,3 @@
     margin-bottom: 15px;
   }
 </style>
-
-<script>
-  import 'src/assets/font/iconfont.css';
-
-  export default {
-    computed: {
-      visible() {
-        return ['/', '/header', '/search'].indexOf(this.$route.path) < 0;
-      }
-    }
-  };
-</script>

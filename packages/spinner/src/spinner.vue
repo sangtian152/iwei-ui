@@ -42,6 +42,10 @@ const parseSpinner = function(index) {
  * <!-- default snake -->
  * <zmbl-spinner :size="30" color="#999"></zmbl-spinner>
  */
+import SpinnerSnake from './spinner/snake.vue'
+import SpinnerDoubleBounce from './spinner/double-bounce.vue'
+import SpinnerTripleBounce from './spinner/triple-bounce.vue'
+import SpinnerFadingCircle from './spinner/fading-circle.vue'
 export default {
   name: 'zmbl-spinner',
 
@@ -52,10 +56,10 @@ export default {
   },
 
   components: {
-    SpinnerSnake: require('./spinner/snake.vue'),
-    SpinnerDoubleBounce: require('./spinner/double-bounce.vue'),
-    SpinnerTripleBounce: require('./spinner/triple-bounce.vue'),
-    SpinnerFadingCircle: require('./spinner/fading-circle.vue')
+    SpinnerSnake,
+    SpinnerDoubleBounce,
+    SpinnerTripleBounce,
+    SpinnerFadingCircle
   },
 
   props: {
