@@ -27,7 +27,13 @@
   a {
     color: inherit;
   }
-
+  .page-title {
+    font-size: 20px;
+    margin: 20px auto;
+    text-align: center;
+    display: block;
+    line-height: 1;
+  }
   .page-back {
     display: inline-block;
     width: 40px;
@@ -40,14 +46,6 @@
       font-size: 24px;
       line-height: 40px;
     }
-  }
-
-  .page-title {
-    font-size: 20px;
-    margin: 20px auto;
-    text-align: center;
-    display: block;
-    line-height: 1;
   }
   .page-part {
     margin-bottom: 15px;

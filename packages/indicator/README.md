@@ -1,14 +1,14 @@
-# Overview
+## Overview
 vue-indicator is a mobile loading indicator plugin for vue.js.
 
-# Installation
+## Installation
 First, install `vue-indicator` from npm:
-```bash
+```shell
 $ npm install vue-indicator
 ```
 
 Then use it:
-```Javascript
+```javascript
 // ES6 mudule
 import Indicator from 'vue-indicator';
 
@@ -16,32 +16,32 @@ import Indicator from 'vue-indicator';
 const Indicator = require('vue-indicator').default;
 ```
 
-# Usage
+## Usage
 Open an indicator:
-```Javascript
+```javascript
 Indicator.open();
 ```
 
 Open an indicator with a string:
-```Javascript
+```javascript
 Indicator.open('Loading...');
 ```
 
 Open an indicator with an object:
-```Javascript
+```javascript
 Indicator.open({ text:'Loading...', spinnerType: 'fading-circle' });
 ```
 
 Then close it:
-```Javascript
+```javascript
 Indicator.close();
 ```
 
-# API
+## API
 | Option      | Description    | Value                                                       | Default |
 |-------------|----------------|-------------------------------------------------------------|---------|
 | text        | indicator text | String                                                      |         |
 | spinnerType | spinner type   | 'snake', 'fading-circle', 'double-bounce', 'triple-bounce'  | 'snake' |
 
-# License
+## License
 MIT
