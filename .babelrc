@@ -2,7 +2,7 @@
   "presets": [[
     "@babel/preset-env", 
     {
-      "loose": true,
+      "loose": false,
       "modules": false,
       "useBuiltIns": "usage",
       "corejs": 3

@@ -2,9 +2,10 @@
   <div class="page-msgbox">
     <h1 class="page-title">Message Box</h1>
     <div class="page-msgbox-wrapper">
-      <zmbl-button @click.native="openAlert" size="large">打开 alert 提示框</zmbl-button>
-      <zmbl-button @click.native="openConfirm" size="large">打开 confirm 提示框</zmbl-button>
-      <zmbl-button @click.native="openPrompt" size="large">打开 prompt 提示框</zmbl-button>
+      <zmbl-button @click.native="openBase" size="large">基础用法</zmbl-button>
+      <zmbl-button @click.native="openAlert" size="large">alert 提示框</zmbl-button>
+      <zmbl-button @click.native="openConfirm" size="large">confirm 提示框</zmbl-button>
+      <zmbl-button @click.native="openPrompt" size="large">prompt 提示框</zmbl-button>
     </div>
   </div>
 </template>
@@ -31,6 +32,9 @@
 
   export default {
     methods: {
+      openBase(){
+        MessageBox('提示', '操作成功');
+      },
       openAlert() {
         MessageBox.alert('操作成功!', '提示');
       },

@@ -1,51 +1,30 @@
-### Overview
-zmbl-popup is a popup component for vue.js
+### Popup
+弹出框，可自定义内容。
 
-### Installation
-
-First, install `zmbl-popup` from npm:
-
-```shell
-npm install zmbl-popup
-```
-
-Import it:
+### 引入
 
 ```javascript
-require ('zmbl-popup/lib/index.css');
-// ES6 mudule
-import Popup from 'zmbl-popup';
-// CommonJS
-const Popup = require('zmbl-popup').default;
+import { Popup } from 'mint-ui';
+
+Vue.component(Popup.name, Popup);
 ```
 
-Register component:
-
-```javascript
-Vue.component('popup', Popup);
-```
-
-Then use it:
+### 基础用法
 
 ```html
-<!-- <popup :visible.sync="popupVisible" position="bottom"></popup> -->
+<mt-popup
+  v-model="popupVisible"
+  position="bottom">
+  ...
+</mt-popup>
 ```
 
-### Usage
-`position` defines the location of the popup. If it's `bottom`, when you switch on the popup, it'll slide into the screen from the bottom and become fixed at the bottom.
+### 属性
+| 参数            | 说明                                       | 类型                         | 默认值       |
+|-------------------|-------------------------------|--------------------|---------------|
+| visible           | visibility of the popup   | Boolean        | 'false'       |
+| position          | location of the popup         | 'top' 'right' 'bottom' 'left' |               |
+| pop-transition    | CSS transition of the popup         | 'popup-fade' 'popup-slide'    | 'popup-slide' |
+| modal             | determines if a modal pops with the popup   | Boolean                       | true          |
+| closeOnClickModal | determines if the popup turns off when the modal is clicked | Boolean          | true          |
 
-If the `position` attribute is omitted, the popup will be located at the center of the viewport (and of course you can relocate it using CSS). In this case, you may want to set its `popup-transition` attribute to `popup-fade` so that it'll have a fading effect when switched on/off.
-
-Sync `visible` with one of your vue instance variables. Toggle it to switch on/off the popup.
-
-### API
-| Option            | Description                                                 | Value                         | Default       |
-|-------------------|-------------------------------------------------------------|-------------------------------|---------------|
-| visible           | visibility of the popup                                     | Boolean                       | 'false'       |
-| position          | location of the popup                                       | 'top' 'right' 'bottom' 'left' |               |
-| pop-transition    | CSS transition of the popup                                 | 'popup-fade' 'popup-slide'    | 'popup-slide' |
-| modal             | determines if a modal pops with the popup                   | Boolean                       | true          |
-| closeOnClickModal | determines if the popup turns off when the modal is clicked | Boolean                       | true          |
-
-### License
-MIT

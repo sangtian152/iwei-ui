@@ -1,37 +1,50 @@
-## 介绍
+## Dialog对话框
 
-一个简易版组织架构图，组件依赖于[vue-org-tree](https://github.com/hukaibaihu/vue-org-tree)，
-在此基础上将部分源代码进行优化修改。增加鼠标拖拽和鼠标滚轮缩放，并支持节点拖拽，以及节点编辑等功能。
-
-## 安装
-
-    
-`@1.4.2` 表示版本号，建议锁定版本号来保证代码的稳定性
-
-### npm 安装
-
-推荐使用npm安装，它能更好地和[webpack](https://webpack.js.org/)打包工具配合使用。而且可以更好的和
-es6配合使用。并且支持按需引入
-
-```shell
-npm i zm-tree-org -S
-# or 
-yarn add zm-tree-org
-```
+在保留当前页面状态的情况下，告知用户并承载相关操作。
 
 ### 引入
-
-在 main.js 中写入以下内容：
-
 ```javascript
-import Vue from 'vue';
-import ZmTreeOrg from 'zm-tree-org';
-import "zm-tree-org/lib/zm-tree-org.css";
-
-Vue.use(ZmTreeOrg);
+import { Dialog } from 'iwei-ui';
+Vue.component(Dialog.name, Dialog);
 ```
 
-### 最新版本
+### 基础用法
+```html
+<zmbl-dialog
+  title="提示"
+  v-model="dialogVisible">
+  <span>这是一段信息</span>
+</zmbl-dialog>
+```
 
-[![NPM version](https://img.shields.io/npm/v/zm-tree-org)](https://www.npmjs.com/package/zm-tree-org)
+### 属性
+| 参数            | 说明                                     | 类型    | 可选值     | 默认值     |
+|-------------------|---------------------------------------|----------|-------------|-----------|
+| value / v-model | 是否显示弹出层     | Boolean  |         | false        |
+| title | Dialog 的标题     | String  |       | ——        |
+| modal  | 是否需要遮罩层    | Boolean  |       | true       |
+| closeOnClickModal | 	是否可以通过点击 modal 关闭 Dialog     | Boolean  |       | true        |
+| showConfirmButton | 是否显示确定按钮   | Boolean  |        | true        |
+| showCancelButton | 是否显示取消按钮   | Boolean  |        | true        |
+| confirmButtonText | 自定义确定按钮文字   | String  |        | ——        |
+| cancelButtonText | 自定义取消按钮文字   | String  |        | ——        |
+| confirmButtonClass | 确定按钮的自定义类名   | Boolean  |        | false        |
+| cancelButtonClass | 取消按钮的自定义类名   | Boolean  |        | false        |
+| confirmButtonDisabled | 是否禁用确定按钮   | Boolean  |        | false        |
+
+### 事件
+| 事件            | 说明                                     | 回调参数    |
+|-------------------|---------------------------------------|----------|
+| on-open | Dialog 打开的回调     | ——  |
+| on-close | Dialog 关闭的回调     | ——  |
+| on-click | 按钮点击回调     | action  |
+
+### Slot
+| name            | 说明                                     |
+|-------------------|---------------------------------------|
+| — | Dialog 的内容     |
+| title | Dialog 标题区的内容     |
+| footer | Dialog 按钮操作区的内容     |
+
+
 

@@ -2,7 +2,7 @@
   <div class="page-dialog">
     <h1 class="page-title">Dialog</h1>
     <div class="button">
-      <zmbl-button type="primary" @click="dialogVisible = true">点击打开dialog</zmbl-button>
+      <zmbl-button type="primary" @click="dialogVisible = true">打开dialog</zmbl-button>
     </div>
 
     <zmbl-dialog

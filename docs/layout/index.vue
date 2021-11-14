@@ -3,9 +3,11 @@
   <navbar />
   <div class="app-container">
     <sidebar class="sidebar-container" />
-    <app-main />
-    <div class="mobile">
-      <iframe :src="iframeSrc" frameborder="0" style="width: 100%; height: 100%"></iframe>
+    <div class="doc-container">
+      <app-main />
+      <div class="mobile">
+        <iframe :src="iframeSrc" frameborder="0" style="width: 100%; height: 100%"></iframe>
+      </div>
     </div>
   </div>
 </div>
@@ -23,9 +25,9 @@ export default {
   },
   computed:{
     iframeSrc(){
-      console.log(this.$route.path, 155)
-      let path = this.$route.path.replace('/docs', '')
-      return `/#${path}`
+      const { meta, path } = this.$route
+      let route = meta && meta.demo ? meta.demo : path
+      return `/demo.html/#${route}`
     }
   },
   created(){
@@ -58,16 +60,22 @@ export default {
   .sidebar-container {
     overflow: auto;
   }
+  .doc-container {
+    flex: 1;
+    display: flex;
+    padding: 20px;
+  }
   .app-main {
     flex: 1;
     overflow: auto;
+    border-radius: 10px;
   }
 }
 .mobile {
   width: 330px;
-  height: 587px;
   border: 1px solid #ddd;
   border-radius: 10px;
+  margin-left: 20px;
   overflow: hidden;
 }
 </style>

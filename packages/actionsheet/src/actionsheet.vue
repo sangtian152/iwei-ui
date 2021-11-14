@@ -2,9 +2,9 @@
   <transition name="actionsheet-float">
     <div v-show="currentValue" class="zmbl-actionsheet">
       <ul class="zmbl-actionsheet-list" :style="{ 'margin-bottom': cancelText ? '5px' : '0' }">
-        <li v-for="( item, index ) in actions" :key="index" class="zmbl-actionsheet-listitem" @click.stop="itemClick(item, index)">{{ item.name }}</li>
+        <li v-for="( item, index ) in actions" :key="index" class="zmbl-actionsheet-listitem" @click.stop="itemClick(item, index)">{{ item.name || item }}</li>
       </ul>
-      <a class="zmbl-actionsheet-button" @click.stop="currentValue = false" v-if="cancelText">{{ cancelText }}</a>
+      <a class="zmbl-actionsheet-button" @click.stop="handleClose" v-if="showCancel">{{ cancelText }}</a>
     </div>
   </transition>
 </template>
@@ -80,7 +80,10 @@
       closeOnClickModal: {
         default: true
       },
-
+      showCancel: {
+        type: Boolean,
+        default: true
+      },
       cancelText: {
         type: String,
         default: '取消'
@@ -109,12 +112,20 @@
     },
 
     methods: {
+      onOpen(){
+        this.$emit('on-open');
+      },
       itemClick(item, index) {
         if (item.method && typeof item.method === 'function') {
           item.method(item, index);
         }
+        this.$emit('on-click', item)
         this.currentValue = false;
-      }
+      },
+      handleClose(){
+        this.$emit('on-close')
+        this.currentValue = false;
+      },
     },
 
     mounted() {

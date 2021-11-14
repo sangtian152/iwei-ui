@@ -1,41 +1,47 @@
-import NavConfig from './nav.config.json';
+import {NavConfig} from '../nav.config';
 /* Layout */
 import Layout from 'docs/layout'
 
+const config = NavConfig()
+
 const registerRoute = (config) => {
   let route = [];
-  config.map(nav =>
+  config.map(nav => {
     nav.list.map(page => {
-      const docsPath = page.path.replace('/docs/', '')
-      console.log(docsPath)
+      const dirName = page.path.split('/').pop()
       route.push({
-        name: `Docs${page.name}`,
+        name: page.name,
         path: page.path,
-        component: () => import(`zmbl-ui/packages/${docsPath}/README.md`),
+        component: () => import(`zmbl-ui/packages/${dirName}/README.md`),
         meta: {
           title: page.title || page.name,
           description: page.description
         }
       })
-    }
-    )
-  );
+    })
+  });
 
   return { route, navs: config };
 };
 
-const route = registerRoute(NavConfig);
+const constantRoutes = [
+  {
+    path: '/quickstart',
+    name: 'Quickstart',
+    component: () => import(`docs/pages/Quickstart.md`),
+    meta: {
+      demo: '/'
+    }
+  }
+]
 
-/* route.route.push({
-  path: '/',
-  component: () => import('./demos.vue')
-}); */
-export const navs = route.navs;
+const route = registerRoute(config);
+
+export const navs = constantRoutes.concat(route.navs);
+
 export default [{
   path: '/',
-  component: () => import('./demos.vue')
-},{
-  path: '/docs',
+  redirect: '/quickstart',
   component: Layout,
-  children: route.route
+  children: constantRoutes.concat(route.route)
 }];

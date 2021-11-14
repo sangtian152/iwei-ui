@@ -8,7 +8,8 @@
   height: 60px;
   line-height: 60px;
   font-size: 20px;
-  background: #ddd;
+  color: #fff;
+  background: #001938;
   padding: 0 30px;
 }
 </style>

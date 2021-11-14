@@ -2,18 +2,22 @@
   <div class="zmbl-dialog-wrapper">
     <transition name="dialog-bounce">
       <div class="zmbl-dialog" v-show="value">
-        <div class="zmbl-dialog-header" v-if="!!title">
-          <div class="zmbl-dialog-title">{{ title }}</div>
-        </div>
+        <slot name="title">
+          <div class="zmbl-dialog-header" v-if="!!title">
+            <div class="zmbl-dialog-title">{{ title }}</div>
+          </div>
+        </slot>
         <div class="zmbl-dialog-content">
           <div class="zmbl-dialog-message">
             <slot></slot>
           </div>
         </div>
-        <div class="zmbl-dialog-btns">
-          <button :class="[ cancelButtonClasses ]" v-show="showCancelButton" @click="handleAction('cancel')">{{ cancelButtonText }}</button>
-          <button :class="[ confirmButtonClasses ]" v-show="showConfirmButton" @click="handleAction('confirm')">{{ confirmButtonText }}</button>
-        </div>
+        <slot name="footer">
+          <div class="zmbl-dialog-btns">
+            <button :class="[ cancelButtonClasses ]" v-show="showCancelButton" @click="handleAction('cancel')">{{ cancelButtonText }}</button>
+            <button :class="[ confirmButtonClasses ]" v-show="showConfirmButton" @click="handleAction('confirm')">{{ confirmButtonText }}</button>
+          </div>
+        </slot>
       </div>
     </transition>
   </div>
@@ -27,7 +31,10 @@
     mixins: [ Popup ],
 
     props: {
+      title: String,
+      context: String,
       modal: {
+        type: Boolean,
         default: true
       },
       lockScroll: {
@@ -37,10 +44,6 @@
       closeOnClickModal: {
         default: true
       },
-      closeOnPressEscape: {
-        default: true
-      },
-      title: String,
       showConfirmButton: {
         type: Boolean,
         default: true
@@ -58,9 +61,8 @@
         default: '取消'
       },
       confirmButtonClass: String,
-      confirmButtonDisabled: Boolean,
       cancelButtonClass: String,
-      callback: Function,
+      confirmButtonDisabled: Boolean,
     },
 
     computed: {

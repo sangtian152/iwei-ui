@@ -1,10 +1,15 @@
 <template>
   <div class="sidebar">
-    <div v-for="(group, index) in navs" :key="index" class="doc-nav_group">
-      <div class="page-title" v-text="group.title"></div>
-      <div v-for="item in group.list" :key="item.path" class="doc-nav_item">
-        <router-link :to="item.path">{{ item.name }}</router-link>
+    <div v-for="(route, index) in navs" :key="index" class="doc-nav_group">
+      <div v-if="route.path" :key="route.path" class="doc-nav_item">
+        <router-link :to="route.path">{{ route.name }}</router-link>
       </div>
+      <template v-else>
+        <div class="page-title" v-text="route.title"></div>
+        <div v-for="item in route.list" :key="item.path" class="doc-nav_item">
+          <router-link :to="item.path">{{ item.name }}</router-link>
+        </div>
+      </template>
     </div>
   </div>
 </template>
@@ -30,18 +35,20 @@
 </script>
 <style lang="scss" scoped>
 .sidebar {
-  width: 200px;
+  width: 220px;
   border: 1px solid #ddd;
+  background: #fff;
+  padding: 24px 0 32px;
   .page-title {
-    font-size: 20px;
+    font-weight: 700;
     margin: 20px auto;
-    text-align: center;
-    display: block;
     line-height: 1;
+    padding-left: 30px;
   }
   .doc-nav_item {
     height: 44px;
     line-height: 44px;
+    background: #fff;
     a {
       color: #455a64;
       display: block;

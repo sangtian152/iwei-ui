@@ -1,98 +1,70 @@
-# Overview
-zmbl-loadmore is a two-direction mobile pull-to-refresh component for vue.js.
+## Loadmore
+下拉/上拉刷新，支持自定义 HTML 模板。.
 
-# Installation
-```bash
-$ npm install zmbl-loadmore
-```
-
-# Usage
-Import `zmbl-loadmore` to your project:
+### 引入
 ```Javascript
-require('zmbl-loadmore/lib/index.css');
-
 // ES6 mudule
-import Loadmore from 'zmbl-loadmore';
-
-// CommonJS
-const Loadmore = require('zmbl-loadmore').default;
+import { Loadmore } from 'iwei-ui';
+Vue.component(Loadmore.name, Loadmore);
 ```
 
-Register component:
-```Javascript
-Vue.component('loadmore', Loadmore);
-```
-
-Then use it:
+### 示例
 ```html
-<loadmore :top-method="loadTop" :bottom-method="loadBottom" :bottom-all-loaded="allLoaded">
-  ...
-</loadmore>
-```
-
-# Example
-Visit [this page](http://leopoldthecoder.github.io/Demos/vue-loadmore/index.html) using your mobile device.
-```html
-<loadmore :top-method="loadTop" :bottom-method="loadBottom" :bottom-all-loaded="allLoaded">
+<zmbl-loadmore :top-method="loadTop" :bottom-method="loadBottom" :bottom-all-loaded="allLoaded" ref="loadmore">
   <ul>
-    <li v-for="item in list">{{ item }}</li>
+    <li v-for="item in list">{{'{'}}{item}{{'}'}}</li>
   </ul>
-</loadmore>
-<loadmore :top-method="loadTop2" :top-status.sync="topStatus">
-  <ul>
-    <li v-for="item in list2">{{ item }}</li>
-  </ul>
-  <div slot="top" class="zmbl-loadmore-top">
-    <span v-show="topStatus !== 'loading'" :class="{ 'rotate': topStatus === 'drop' }">↓</span>
-    <span v-show="topStatus === 'loading'">Loading...</span>
-  </div>
-</loadmore>
+</zmbl-loadmore>
 ```
-For upward direction, pull the component `topDistance` pixels away from the top and then release it, the function you appointed as `top-method` will run:
+#### 下拉刷新
+按住列表，下拉一定距离（通过 `topDistance` 配置）后释放，被指定为 `top-method` 的方法就会执行
 ```Javascript
-loadTop(id) {
-  ...// load more data
-  this.$broadcast('onTopLoaded', id);
+loadTop() {
+  ...// 加载更多数据
+  this.$refs.loadmore.onTopLoaded();
 }
 ```
-At the end of your `top-method`, don't forget to broadcast the `onTopLoaded` event so that `zmbl-loadmore` removes `topLoadingText`. Note that a parameter called `id` is passed to `loadTop` and `onTopLoaded`. This is because after the top data is loaded, some reposition work is performed inside a `zmbl-loadmore` instance, and `id` simply tells the component which instance should be repositioned. You don't need to do anything more than passing `id` to `onTopLoaded` just as shown above.
-
-For downward direction, things are similar. To invoke `bottom-method`, just pull the component `bottomDistance` pixels away from the bottom and then release it.
+注意在这个方法的最后需要手动调用 `loadmore` 的 `onTopLoaded` 事件。这是因为在加载数据后需要对组件进行一些重新定位的操作。
+#### 上拉加载
+与下拉刷新类似
 ```Javascript
-loadBottom(id) {
-  ...// load more data
-  this.allLoaded = true;// if all data are loaded
-  this.$broadcast('onBottomLoaded', id);
+loadBottom() {
+  ...// 加载更多数据
+  this.allLoaded = true;// 若数据已全部获取完毕
+  this.$refs.loadmore.onBottomLoaded();
 }
 ```
-Remember to set `bottom-all-loaded` to `true` after all data are loaded. And of course broadcast `onBottomLoaded` with `id`.
+唯一的区别是，当底部数据全部获取完毕时，可以将绑定到组件 `bottom-all-loaded` 属性的变量赋值为 true，这样 `bottom-method` 就不会再次执行了。
 
-You can customize the top and bottom DOM using an HTML template. For example, to customize the top DOM, you'll need to add a variable that syncs with `top-status` on `loadmore` tag, and then write your template with a `slot` attribute set to `top` and `class` set to `zmbl-loadmore-top`. `top-status` has three possible values that indicates which status the component is at:
-*  `pull` if the component is being pulled yet not ready to drop (top distance is within the distance threshold defined by `topDistance`)
-*  `drop` if the component is ready to drop
-*  `loading` if `topMethod` is running
+手指在屏幕上滑动的距离与组件实际移动的距离比值可以通过 `distance-index` 参数配置，默认值为 2。
 
-And of course, if a top HTMl template is given, `topPullText`, `topDropText` and `topLoadingText` are all unnecessary.
+### 属性
+| 参数            | 说明                                     | 类型    | 默认值     |
+|-------------------|------------------------------------------------|----------|-------------|
+| autoFill          | 若为真，loadmore 会自动检测并撑满其容器          | Boolean  | true        |
+| distanceIndex     | 手指移动与组件移动距离的比值                     | Number  | 2        |
+| maxDistance       | 组件可移动的最大距离（像素），若为 0 则不限制     | Number  | 0        |
+| topPullText       | topStatus 为 pull 时加载提示区域的文字          | String   | '下拉刷新'  |
+| topDropText       | topStatus 为 drop 时加载提示区域的文字          | String   | '释放更新'  |
+| topLoadingText    | topStatus 为 loading 时加载提示区域的文字           | String   | '加载中...' |
+| topDistance       | 触发 `topMethod` 的下拉距离阈值（像素）                     | Number   | 70          |
+| topMethod         | 下拉刷新执行的方法                                        | Function |             |
+| bottomPullText    | bottomStatus 为 pull 时加载提示区域的文字                | String   | '上拉刷新'  |
+| bottomDropText    | bottomStatus 为 drop 时加载提示区域的文字                  | String   | '释放更新'  |
+| bottomLoadingText | bottomStatus 为 loading 时加载提示区域的文字                      | String   | '加载中...' |
+| bottomDistance    | 触发 `bottomMethod` 的上拉距离阈值（像素）                 | Number   | 70          |
+| bottomMethod      | 上拉刷新执行的方法                                      | Function |             |
+| bottomAllLoaded   | 若为真，则 `bottomMethod` 不会被再次触发             | Boolean  | false       |
 
-Don't need to load data from upward direction? Simply omit the `topMethod` attribute. Same goes to downward.
+### 事件
+| 事件            | 说明                                   | 回调参数     |
+|-------------------|------------------------------------------------|-------------|
+| top-status-change | 	组件顶部状态发生变化时的回调函数    | 	组件顶部的新状态名 |
+| bottom-status-change | 	组件底部状态发生变化时的回调函数    | 	组件底部的新状态名 |
 
-Upon loaded, `loadmore` will automatically check if it is tall enough to fill its container. If not, `bottom-method` will run until its container is filled. Turn off `auto-fill` if you'd rather handle this manually.
-
-# API
-| Option            | Description                                                      | Value    | Default     |
-|-------------------|------------------------------------------------------------------|----------|-------------|
-| autoFill          | if `true`, `loadmore` will check and fill its container          | Boolean  | true        |
-| topPullText       | top text when the component is being pulled down                 | String   | '下拉刷新'  |
-| topDropText       | top text when the component is ready to drop                     | String   | '释放更新'  |
-| topLoadingText    | top text while `topMethod` is running                            | String   | '加载中...' |
-| topDistance       | distance threshold that triggers `topMethod`                     | Number   | 70          |
-| topMethod         | upward load-more function                                        | Function |             |
-| bottomPullText    | bottom text when the component is being pulled up                | String   | '上拉刷新'  |
-| bottomDropText    | bottom text when the component is ready to drop                  | String   | '释放更新'  |
-| bottomLoadingText | bottom text while `bottomMethod` is running                      | String   | '加载中...' |
-| bottomDistance    | distance threshold that triggers `bottomMethod`                  | Number   | 70          |
-| bottomMethod      | downward load-more function                                      | Function |             |
-| bottomAllLoaded   | if `true`, `bottomMethod` can no longer be triggered             | Boolean  | false       |
-
-# License
-MIT
+### Slot
+| name            | 说明                                   |
+|-------------------|------------------------------------------------|
+| — | 	数据列表    |
+| top | 	自定义顶部加载提示区域 HTML 模板    |
+| bottom | 	自定义底部加载提示区域 HTML 模板    |

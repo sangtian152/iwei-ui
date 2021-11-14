@@ -1,4 +1,4 @@
-import NavConfig from './nav.config.json';
+import {NavConfig} from '../nav.config';
 
 const registerRoute = (config) => {
   let route = [];
@@ -19,7 +19,7 @@ const registerRoute = (config) => {
   return { route, navs: config };
 };
 
-const route = registerRoute(NavConfig);
+const route = registerRoute(NavConfig());
 
 route.route.push({
   path: '/',

@@ -16,7 +16,6 @@ export default {
   @import '~example/assets/styles/reset.css';
   html, body {
     height: 100%;
-    background-color: #fafafa;
     -webkit-overflow-scrolling: touch;
     user-select: none;
   }
@@ -26,5 +25,6 @@ export default {
   }
   .page {
     height: 100%;
+    background-color: #f5f5f5;
   }
 </style>

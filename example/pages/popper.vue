@@ -3,7 +3,7 @@
     <h1 class="page-title">popper</h1>
     <div class="page-popper-wrapper">
       <zmbl-popper
-        placement="top-start"
+        placement="top"
         title="标题"
         width="200"
         trigger="click"

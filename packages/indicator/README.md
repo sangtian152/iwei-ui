@@ -1,47 +1,37 @@
-## Overview
-vue-indicator is a mobile loading indicator plugin for vue.js.
+## Indicator
+加载提示框，支持自定义文本和加载图标。
 
-## Installation
-First, install `vue-indicator` from npm:
-```shell
-$ npm install vue-indicator
-```
-
-Then use it:
+## 引入
 ```javascript
 // ES6 mudule
-import Indicator from 'vue-indicator';
-
-// CommonJS
-const Indicator = require('vue-indicator').default;
+import { Indicator } from 'iwei-ui';
 ```
 
-## Usage
-Open an indicator:
+### 基础用法
 ```javascript
 Indicator.open();
 ```
 
-Open an indicator with a string:
+### 带文字的提示框:
 ```javascript
 Indicator.open('Loading...');
 ```
 
-Open an indicator with an object:
+### 可配置的加载提示框:
 ```javascript
 Indicator.open({ text:'Loading...', spinnerType: 'fading-circle' });
 ```
 
-Then close it:
+### 关闭提示框:
 ```javascript
 Indicator.close();
 ```
 
-## API
-| Option      | Description    | Value                                                       | Default |
+### Options
+| 参数      | 说明    | 类型                                                       | 默认值 |
 |-------------|----------------|-------------------------------------------------------------|---------|
 | text        | indicator text | String                                                      |         |
 | spinnerType | spinner type   | 'snake', 'fading-circle', 'double-bounce', 'triple-bounce'  | 'snake' |
 
-## License
+### License
 MIT

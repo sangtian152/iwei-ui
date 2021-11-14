@@ -27,7 +27,7 @@
     },
 
     methods: {
-      leftButtonHandler(evt) {
+      leftButtonHandler() {
         console.log(123);
       }
     }

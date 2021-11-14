@@ -28,7 +28,7 @@ export default {
     onChange(index) {
       this.index = index;
     },
-    showImagePreview(options) {
+    showImagePreview() {
       this.show = true
     },
   }
