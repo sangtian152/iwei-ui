@@ -2,26 +2,33 @@
   <div class="page-range">
     <h1 class="page-title">Range</h1>
     <p class="page-range-header">基本功能</p>
-    <zmbl-cell v-for="item in cells1" :title="item.title" :key="item.value" :label="'value:' + item.value">
-      <zmbl-range v-model="item.value">
-        <div slot="start" v-if="item.start">{{ item.start }}</div>
-        <div slot="end" v-if="item.end">{{ item.end }}</div>
+    <zmbl-cell title="默认" :label="'value:' + value1">
+      <zmbl-range v-model="value1"></zmbl-range>
+    </zmbl-cell>
+    <zmbl-cell title="左右文字" :label="'value:' + value3">
+      <zmbl-range v-model="value3">
+        <div slot="start">{{ 0 }}</div>
+        <div slot="end">{{ 100 }}</div>
       </zmbl-range>
     </zmbl-cell>
     <p class="page-range-header">自定义</p>
-    <zmbl-cell v-for="item in cells2" :title="item.title" :key="item.value" :label="'value:' + item.value">
-      <zmbl-range v-model="item.value" :min="item.min || 0" :max="item.max || 100" :step="item.step || 1" :bar-height="item.barHeight || 1" :disabled="item.disabled">
-        <div slot="start" v-if="item.start">{{ item.start }}</div>
-        <div slot="end" v-if="item.end">{{ item.end }}</div>
-      </zmbl-range>
+    <zmbl-cell title="定义步长" :label="'value:' + value4">
+      <zmbl-range v-model="value4" :step="10"></zmbl-range>
     </zmbl-cell>
+    <zmbl-cell title="定义区间" :label="'value:' + value5">
+      <zmbl-range v-model="value5" :min="10" :max="90"></zmbl-range>
+    </zmbl-cell>
+    <zmbl-cell title="禁用" :label="'value:' + value7">
+      <zmbl-range v-model="value7" disabled></zmbl-range>
+    </zmbl-cell>
+    <!-- 
     <p class="page-range-header">场景举例</p>
-    <zmbl-cell v-for="item in cells3" :title="item.title" :key="item.value" :label="'value:' + item.value">
+    <zmbl-cell v-for="(item, index) in cells3" :title="item.title" :key="item.value + index" :label="'value:' + item.value">
       <zmbl-range v-model="item.value" :min="item.min || 0" :max="item.max || 100" :step="item.step || 1">
         <div slot="start" v-if="item.start" :style="{ 'font-size': item.start + 'px' }">{{ item.start }}</div>
         <div slot="end" v-if="item.end" :style="{ 'font-size': item.end + 'px' }">{{ item.end }}</div>
       </zmbl-range>
-    </zmbl-cell>
+    </zmbl-cell> -->
   </div>
 </template>
 
@@ -71,7 +78,7 @@
       };
     },
 
-    mounted() {
+    created() {
       this.cells1 = [{
         title: '默认',
         value: this.value1

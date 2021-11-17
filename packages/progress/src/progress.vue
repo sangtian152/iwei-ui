@@ -10,7 +10,7 @@
 </template>
 
 <style lang="scss">
-  .mt {
+  .zmbl {
     &-progress {
       position: relative;
       display: flex;

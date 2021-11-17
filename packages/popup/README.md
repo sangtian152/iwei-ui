@@ -22,9 +22,9 @@ Vue.component(Popup.name, Popup);
 ### 属性
 | 参数            | 说明                                       | 类型                         | 默认值       |
 |-------------------|-------------------------------|--------------------|---------------|
-| visible           | visibility of the popup   | Boolean        | 'false'       |
-| position          | location of the popup         | 'top' 'right' 'bottom' 'left' |               |
-| pop-transition    | CSS transition of the popup         | 'popup-fade' 'popup-slide'    | 'popup-slide' |
-| modal             | determines if a modal pops with the popup   | Boolean                       | true          |
-| closeOnClickModal | determines if the popup turns off when the modal is clicked | Boolean          | true          |
+| value / v-model           | 状态是否可见   | Boolean        | 'false'       |
+| position          | popup 的位置。省略则居中显示        | 'top' 'right' 'bottom' 'left' |               |
+| pop-transition    | 显示/隐藏时的动效，仅在省略 position 时可配置         | 'popup-fade' 'popup-slide'    | 'popup-slide' |
+| modal             | 是否创建一个 modal 层   | Boolean                       | true          |
+| closeOnClickModal | 是否可以通过点击 modal 层来关闭 popup | Boolean          | true          |
 

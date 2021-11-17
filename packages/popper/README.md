@@ -1,7 +1,15 @@
 ## Popper
 常用于展示提示信息。
 
-### 基础用法
+### 引入
+
+```javascript
+import { Popper } from 'iwei-ui';
+
+Vue.component(Popper.name, Popper);
+```
+
+### click 激活
 ```html
 <zmbl-popper
   placement="top"
@@ -11,7 +19,10 @@
   content="这是一段内容,这是一段内容,这是一段内容,这是一段内容。">
   <zmbl-button type="primary" slot="reference">click 激活</zmbl-button>
 </zmbl-popper>
+```
 
+### focus 激活
+```html
 <zmbl-popper
   placement="top-start"
   title="标题"

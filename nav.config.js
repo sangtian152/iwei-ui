@@ -1,96 +1,7 @@
 export const NavConfig = () => [
   {
-    "title": "JS Components",
+    "title": "基础组件",
     "list": [
-      {
-        "path": "/toast",
-        "name": "Toast"
-      },
-      {
-        "path": "/indicator",
-        "name": "Indicator"
-      },
-      {
-        "path": "/loadmore",
-        "name": "Loadmore"
-      },
-      {
-        "path": "/infinite-scroll",
-        "name": "Infinite scroll"
-      },
-      {
-        "path": "/dialog",
-        "name": "Dialog"
-      },
-      {
-        "path": "/message-box",
-        "name": "Message box"
-      },
-      {
-        "path": "/actionsheet",
-        "name": "Action sheet"
-      },
-      {
-        "path": "/popup",
-        "name": "Popup"
-      },
-      {
-        "path": "/popper",
-        "name": "Popper"
-      },
-      {
-        "path": "/swipe",
-        "name": "Swipe"
-      },
-      {
-        "path": "/lazyload",
-        "name": "Lazy load"
-      },
-      {
-        "path": "/range",
-        "name": "Range"
-      },
-      {
-        "path": "/progress",
-        "name": "Progress"
-      },
-      {
-        "path": "/picker",
-        "name": "Picker"
-      },
-      {
-        "path": "/datetime-picker",
-        "name": "Datetime Picker"
-      },
-      {
-        "path": "/index-list",
-        "name": "Index List"
-      },
-      {
-        "path": "/palette-button",
-        "name": "Palette Button"
-      },
-      {
-        "path": "/image-preview",
-        "name": "Image Preview"
-      }
-    ]
-  },
-  {
-    "title": "CSS Components",
-    "list": [
-      {
-        "path": "/header",
-        "name": "Header"
-      },
-      {
-        "path": "/tabbar",
-        "name": "Tabbar"
-      },
-      {
-        "path": "/navbar",
-        "name": "Navbar"
-      },
       {
         "path": "/button",
         "name": "Button"
@@ -100,37 +11,21 @@ export const NavConfig = () => [
         "name": "Cell"
       },
       {
-        "path": "/cell-swipe",
-        "name": "Cell Swipe"
-      },
-      {
-        "path": "/spinner",
-        "name": "Spinner"
-      },
-      {
-        "path": "/tab-container",
-        "name": "TabContainer"
-      },
-      {
-        "path": "/search",
-        "name": "Search"
-      },
-      {
         "path": "/image",
         "name": "Image"
       },
       {
-        "path": "/notice-bar",
-        "name": "Notice Bar"
+        "path": "/popup",
+        "name": "Popup"
       },
       {
-        "path": "/sticky",
-        "name": "Sticky"
-      }
+        "path": "/toast",
+        "name": "Toast"
+      },
     ]
   },
   {
-    "title": "Form Components",
+    "title": "表单组件",
     "list": [
       {
         "path": "/switch",
@@ -145,13 +40,128 @@ export const NavConfig = () => [
         "name": "Radio"
       },
       {
+        "path": "/picker",
+        "name": "Picker"
+      },
+      {
+        "path": "/range",
+        "name": "Range"
+      },
+      {
+        "path": "/search",
+        "name": "Search"
+      },
+      {
         "path": "/field",
         "name": "Field"
       },
       {
+        "path": "/datetime-picker",
+        "name": "Datetime Picker"
+      },
+    ]
+  },
+  {
+    "title": "反馈组件",
+    "list": [
+      {
+        "path": "/actionsheet",
+        "name": "Action sheet"
+      },
+      {
+        "path": "/dialog",
+        "name": "Dialog"
+      },
+      {
+        "path": "/message-box",
+        "name": "Message box"
+      },
+      {
+        "path": "/indicator",
+        "name": "Indicator"
+      },
+      {
+        "path": "/spinner",
+        "name": "Spinner"
+      },
+      {
+        "path": "/loadmore",
+        "name": "Loadmore"
+      },
+      {
+        "path": "/infinite-scroll",
+        "name": "Infinite scroll"
+      },
+      {
+        "path": "/cell-swipe",
+        "name": "Cell Swipe"
+      },
+    ]
+  },
+  {
+    "title": "展示组件",
+    "list": [
+      {
         "path": "/badge",
         "name": "Badge"
-      }
+      },
+      {
+        "path": "/notice-bar",
+        "name": "Notice Bar"
+      },
+      {
+        "path": "/lazyload",
+        "name": "Lazy load"
+      },
+      {
+        "path": "/popper",
+        "name": "Popper"
+      },
+      {
+        "path": "/image-preview",
+        "name": "Image Preview"
+      },
+      {
+        "path": "/progress",
+        "name": "Progress"
+      },
+      {
+        "path": "/sticky",
+        "name": "Sticky"
+      },
+      {
+        "path": "/swipe",
+        "name": "Swipe"
+      },
+    ]
+  },
+  {
+    "title": "导航组件",
+    "list": [
+      {
+        "path": "/header",
+        "name": "Header"
+      },
+      {
+        "path": "/index-list",
+        "name": "Index List"
+      },
+      {
+        "path": "/tabbar",
+        "name": "Tabbar"
+      },
+      {
+        "path": "/tab-container",
+        "name": "TabContainer"
+      },
+      {
+        "path": "/navbar",
+        "name": "Navbar"
+      },
+      {
+        "path": "/palette-button",
+        "name": "Palette Button"
+      },
     ]
   }
 ]

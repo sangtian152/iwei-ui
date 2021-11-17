@@ -11,7 +11,7 @@
 </template>
 
 <style lang="scss">
-  .mt {
+  .zmbl {
     &-range {
       position: relative;
       display: flex;
@@ -19,8 +19,8 @@
       line-height: 30px;
 
       & > * {
-        display: flex;
         display: -webkit-box;
+        display: flex;
       }
 
       & *[slot=start] {
@@ -68,14 +68,14 @@
         width: 0;
       }
 
-      @modifier disabled {
+      &--disabled {
         opacity: 0.5;
       }
     }
   }
 </style>
 
-<script type="text/babel">
+<script>
   import draggable from './draggable';
 
   export default {
@@ -116,54 +116,61 @@
     },
 
     mounted() {
-      const thumb = this.$refs.thumb;
-      const content = this.$refs.content;
+      this.$nextTick(()=>{
+        this.initRange()
+      })
+    },
+    methods:{
+      initRange(){
+        const thumb = this.$refs.thumb;
+        const content = this.$refs.content;
 
-      const getThumbPosition = () => {
-        const contentBox = content.getBoundingClientRect();
-        const thumbBox = thumb.getBoundingClientRect();
-        return {
-          left: thumbBox.left - contentBox.left,
-          top: thumbBox.top - contentBox.top,
-          thumbBoxLeft: thumbBox.left
-        };
-      };
-
-      let dragState = {};
-      draggable(thumb, {
-        start: (event) => {
-          if (this.disabled) return;
-          const position = getThumbPosition();
-          const thumbClickDetalX = event.clientX - position.thumbBoxLeft;
-          dragState = {
-            thumbStartLeft: position.left,
-            thumbStartTop: position.top,
-            thumbClickDetalX: thumbClickDetalX
-          };
-        },
-        drag: (event) => {
-          if (this.disabled) return;
+        const getThumbPosition = () => {
           const contentBox = content.getBoundingClientRect();
-          const deltaX = event.pageX - contentBox.left - dragState.thumbStartLeft - dragState.thumbClickDetalX;
-          const stepCount = Math.ceil((this.max - this.min) / this.step);
-          const newPosition = (dragState.thumbStartLeft + deltaX) - (dragState.thumbStartLeft + deltaX) % (contentBox.width / stepCount);
+          const thumbBox = thumb.getBoundingClientRect();
+          return {
+            left: thumbBox.left - contentBox.left,
+            top: thumbBox.top - contentBox.top,
+            thumbBoxLeft: thumbBox.left
+          };
+        };
 
-          let newProgress = newPosition / contentBox.width;
+        let dragState = {};
+        draggable(thumb, {
+          start: (event) => {
+            if (this.disabled) return;
+            const position = getThumbPosition();
+            const thumbClickDetalX = event.clientX - position.thumbBoxLeft;
+            dragState = {
+              thumbStartLeft: position.left,
+              thumbStartTop: position.top,
+              thumbClickDetalX: thumbClickDetalX
+            };
+          },
+          drag: (event) => {
+            if (this.disabled) return;
+            const contentBox = content.getBoundingClientRect();
+            const deltaX = event.pageX - contentBox.left - dragState.thumbStartLeft - dragState.thumbClickDetalX;
+            const stepCount = Math.ceil((this.max - this.min) / this.step);
+            const newPosition = (dragState.thumbStartLeft + deltaX) - (dragState.thumbStartLeft + deltaX) % (contentBox.width / stepCount);
 
-          if (newProgress < 0) {
-            newProgress = 0;
-          } else if (newProgress > 1) {
-            newProgress = 1;
+            let newProgress = newPosition / contentBox.width;
+
+            if (newProgress < 0) {
+              newProgress = 0;
+            } else if (newProgress > 1) {
+              newProgress = 1;
+            }
+            console.log(newProgress)
+            this.$emit('input', Math.round(this.min + newProgress * (this.max - this.min)));
+          },
+          end: () => {
+            if (this.disabled) return;
+            this.$emit('change', this.value);
+            dragState = {};
           }
-
-          this.$emit('input', Math.round(this.min + newProgress * (this.max - this.min)));
-        },
-        end: () => {
-          if (this.disabled) return;
-          this.$emit('change', this.value);
-          dragState = {};
-        }
-      });
+        });
+      }
     }
   };
 </script>
