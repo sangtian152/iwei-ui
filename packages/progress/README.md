@@ -11,15 +11,15 @@ Vue.component(Progress .name, Progress );
 ### 基础用法
 传入 `value` 作为进度条的值。可自定义它的线宽
 ```html
-<mt-progress :value="20" :bar-height="5"></mt-progress>
+<zmbl-progress :value="20" :bar-height="5"></zmbl-progress>
 ```
 
 可在进度条两侧显示文字
 ```html
-<mt-progress :value="60">
+<zmbl-progress :value="60">
   <div slot="start">0%</div>
   <div slot="end">100%</div>
-</mt-progress>
+</zmbl-progress>
 ```
 
 ### 属性

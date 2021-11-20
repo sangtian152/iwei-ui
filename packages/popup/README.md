@@ -1,5 +1,7 @@
-### Popup
-弹出框，可自定义内容。
+## Popup
+::: tip
+<div>弹出框，可自定义内容。</div>
+:::
 
 ### 引入
 
@@ -12,11 +14,11 @@ Vue.component(Popup.name, Popup);
 ### 基础用法
 
 ```html
-<mt-popup
+<zmbl-popup
   v-model="popupVisible"
   position="bottom">
   ...
-</mt-popup>
+</zmbl-popup>
 ```
 
 ### 属性
@@ -27,4 +29,9 @@ Vue.component(Popup.name, Popup);
 | pop-transition    | 显示/隐藏时的动效，仅在省略 position 时可配置         | 'popup-fade' 'popup-slide'    | 'popup-slide' |
 | modal             | 是否创建一个 modal 层   | Boolean                       | true          |
 | closeOnClickModal | 是否可以通过点击 modal 层来关闭 popup | Boolean          | true          |
+
+### Slot
+| name            | 说明                                     |
+|-------------------|---------------------------------------|
+| — | Popup 的内容     |
 

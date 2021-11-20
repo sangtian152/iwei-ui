@@ -21,13 +21,15 @@
   "scripts": {
     "dev": "npm run bootstrap && npm run build:entry && npm run serve",
     "bootstrap": "yarn || npm i",
+    "lint": "vue-cli-service lint",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "build:entry": "node build/bin/build-entry",
     "build:demo": "node build/bin/build-demo",
-    "lint": "vue-cli-service lint",
     "build:utils": "cross-env BABEL_ENV=utils babel src --out-dir lib --ignore src/index.js",
-    "build:lib": "webpack --config build/webpack.conf.js && webpack --config build/webpack.common.js && webpack --config build/webpack.component.js && npm run build:utils"
+    "build:lib": "webpack --config build/webpack.conf.js && webpack --config build/webpack.common.js && webpack --config build/webpack.component.js && npm run build:utils",
+    "pub": "npm run bootstrap && sh build/git-release.sh && sh build/release.sh && node build/bin/gen-indices.js"
+    
   },
   "dependencies": {
     "array-find-index": "^1.0.2",
@@ -61,6 +63,7 @@
     "mini-css-extract-plugin": "0.9.0",
     "node-sass": "^4.14.1",
     "sass-loader": "^10.0.4",
+    "select-version-cli": "^0.0.2",
     "style-loader": "^2.0.0",
     "terser-webpack-plugin": "^4.2.3",
     "uppercamelcase": "^3.0.0",

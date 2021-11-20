@@ -1,39 +1,34 @@
 <template>
   <div class="page-button">
     <h1 class="page-title">Button</h1>
-    <div class="page-button-group">
-      <zmbl-button size="large">default</zmbl-button>
-      <zmbl-button size="large" type="primary">primary</zmbl-button>
-      <zmbl-button size="large" type="danger">danger</zmbl-button>
-    </div>
 
+    <p>基础按钮</p>
     <div class="page-button-group">
       <zmbl-button>default</zmbl-button>
       <zmbl-button type="primary">primary</zmbl-button>
       <zmbl-button type="danger">danger</zmbl-button>
     </div>
-
+    <p>幽灵按钮</p>
     <div class="page-button-group">
-      <zmbl-button size="small">default</zmbl-button>
-      <zmbl-button size="small" type="primary">primary</zmbl-button>
-      <zmbl-button size="small" type="danger">danger</zmbl-button>
+      <zmbl-button plain>default</zmbl-button>
+      <zmbl-button plain type="primary">primary</zmbl-button>
+      <zmbl-button plain type="danger">danger</zmbl-button>
     </div>
-
+    <p>不同尺寸</p>
     <div class="page-button-group">
-      <zmbl-button disabled size="large">default</zmbl-button>
+      <zmbl-button size="small">small</zmbl-button>
+      <zmbl-button size="normal" type="primary">normal</zmbl-button>
+      <zmbl-button size="large" type="danger">large</zmbl-button>
+    </div>
+    <p>禁用状态</p>
+    <div class="page-button-group">
       <zmbl-button disabled size="large" type="primary">primary</zmbl-button>
-      <zmbl-button disabled size="large" type="danger">danger</zmbl-button>
     </div>
 
+    
+    <p>带图标</p>
     <div class="page-button-group">
-      <zmbl-button plain size="large">default</zmbl-button>
-      <zmbl-button plain size="large" type="primary">primary</zmbl-button>
-      <zmbl-button plain size="large" type="danger">danger</zmbl-button>
-    </div>
-
-    <div class="page-button-group">
-      <zmbl-button>
-        <img src="../assets/100x100.png" height="20" width="20" slot="icon">
+      <zmbl-button icon="back">
         带自定义图标
       </zmbl-button>
     </div>

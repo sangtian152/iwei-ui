@@ -11,7 +11,7 @@ Vue.component(Range.name, Range);
 ### 基础用法
 将一个本地变量与 `range` 的 `value` 属性同步即可实现双向绑定
 ```html
-<mt-range v-model="value"></mt-range>
+<zmbl-range v-model="value"></zmbl-range>
 ```
 
 ### 左右文字

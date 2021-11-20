@@ -2,15 +2,11 @@
   <div class="page-switch">
     <div class="page-title">Switch</div>
     <div class="page-part page-switch-padding">
-      <zmbl-switch v-model="value1" @change="handleChange">
-        <label v-text="value1"></label>
-      </zmbl-switch>
+      <zmbl-switch v-model="value1" @change="handleChange"></zmbl-switch>
     </div>
 
     <div class="page-part page-switch-padding">
-      <zmbl-switch v-model="value4" @change="handleChange">
-        <label v-text="value4"></label>
-      </zmbl-switch>
+      <zmbl-switch v-model="value4" @change="handleChange">开关</zmbl-switch>
     </div>
 
     <zmbl-cell :title="'选项 ' + value2">

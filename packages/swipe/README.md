@@ -12,29 +12,29 @@ Vue.component(SwipeItem.name, SwipeItem);
 
 ### 基础用法
 ```html
-<mt-swipe :auto="4000">
-  <mt-swipe-item>1</mt-swipe-item>
-  <mt-swipe-item>2</mt-swipe-item>
-  <mt-swipe-item>3</mt-swipe-item>
-</mt-swipe>
+<zmbl-swipe :auto="4000">
+  <zmbl-swipe-item>1</zmbl-swipe-item>
+  <zmbl-swipe-item>2</zmbl-swipe-item>
+  <zmbl-swipe-item>3</zmbl-swipe-item>
+</zmbl-swipe>
 ```
 
 ### 隐藏 indicators
 ```html
-<mt-swipe :show-indicators="false">
-  <mt-swipe-item>1</mt-swipe-item>
-  <mt-swipe-item>2</mt-swipe-item>
-  <mt-swipe-item>3</mt-swipe-item>
-</mt-swipe>
+<zmbl-swipe :show-indicators="false">
+  <zmbl-swipe-item>1</zmbl-swipe-item>
+  <zmbl-swipe-item>2</zmbl-swipe-item>
+  <zmbl-swipe-item>3</zmbl-swipe-item>
+</zmbl-swipe>
 ```
 
 ### 取消自动播放
 ```html
-<mt-swipe :auto="0">
-  <mt-swipe-item>1</mt-swipe-item>
-  <mt-swipe-item>2</mt-swipe-item>
-  <mt-swipe-item>3</mt-swipe-item>
-</mt-swipe>
+<zmbl-swipe :auto="0">
+  <zmbl-swipe-item>1</zmbl-swipe-item>
+  <zmbl-swipe-item>2</zmbl-swipe-item>
+  <zmbl-swipe-item>3</zmbl-swipe-item>
+</zmbl-swipe>
 ```
 
 ### 属性
@@ -49,12 +49,12 @@ Vue.component(SwipeItem.name, SwipeItem);
 | stopPropagation | 是否在 touchstart 事件触发时阻止冒泡。 | Boolean          | false          |
 
 ### Slot
-mt-swipe
+zmbl-swipe
 | name            | 说明                                     |
 |-------------------|---------------------------------------|
-| —                 | 一个或多个 mt-swipe-item 组件     |
+| —                 | 一个或多个 zmbl-swipe-item 组件     |
 
-mt-swipe-item
+zmbl-swipe-item
 | name            | 说明                                     |
 |-------------------|---------------------------------------|
 | —                 | 单个轮播图的内容     |
