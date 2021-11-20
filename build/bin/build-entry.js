@@ -10,6 +10,7 @@ var EXPORT_TEMPLATE = 'export { default as {{name}} } from \'../packages/{{packa
 var ISNTALL_COMPONENT_TEMPLATE = '  Vue.component({{name}}.name, {{name}});';
 var MAIN_TEMPLATE = `{{include}}
 import '../src/assets/font/iconfont.css';
+import '../src/assets/font/icon.css';
 import merge from './utils/merge';
 
 const version = '{{version}}';

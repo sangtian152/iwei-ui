@@ -1,53 +1,3 @@
-<style lang="scss">
-  .zmbl {
-    &-swipe {
-      overflow: hidden;
-      position: relative;
-      height: 100%;
-
-      &-items-wrap {
-        position: relative;
-        overflow: hidden;
-        height: 100%;
-
-        > div {
-          position: absolute;
-          transform: translateX(-100%);
-          width: 100%;
-          height: 100%;
-          display: none;
-
-          &.is-active {
-            display: block;
-            transform: none;
-          }
-        }
-      }
-
-      &-indicators {
-        position: absolute;
-        bottom: 10px;
-        left: 50%;
-        transform: translateX(-50%);
-      }
-
-      &-indicator {
-        width: 8px;
-        height: 8px;
-        display: inline-block;
-        border-radius: 100%;
-        background: #000;
-        opacity: 0.2;
-        margin: 0 3px;
-
-        &.is-active {
-          background: #fff;
-        }
-      }
-    }
-  }
-</style>
-
 <template>
   <div class="zmbl-swipe">
     <div class="zmbl-swipe-items-wrap" ref="wrap">
@@ -580,3 +530,52 @@
     }
   };
 </script>
+<style lang="scss">
+  .zmbl {
+    &-swipe {
+      overflow: hidden;
+      position: relative;
+      height: 100%;
+
+      &-items-wrap {
+        position: relative;
+        overflow: hidden;
+        height: 100%;
+
+        > div {
+          position: absolute;
+          transform: translateX(-100%);
+          width: 100%;
+          height: 100%;
+          display: none;
+
+          &.is-active {
+            display: block;
+            transform: none;
+          }
+        }
+      }
+
+      &-indicators {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      &-indicator {
+        width: 8px;
+        height: 8px;
+        display: inline-block;
+        border-radius: 100%;
+        background: #000;
+        opacity: 0.2;
+        margin: 0 3px;
+
+        &.is-active {
+          background: #fff;
+        }
+      }
+    }
+  }
+</style>

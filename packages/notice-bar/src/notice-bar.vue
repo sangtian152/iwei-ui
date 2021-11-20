@@ -192,6 +192,8 @@ export default {
 
     &.zmbl-ellipsis {
       max-width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
   }
 

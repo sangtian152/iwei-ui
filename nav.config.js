@@ -11,6 +11,10 @@ export const NavConfig = () => [
         "name": "Cell"
       },
       {
+        "path": "/icon",
+        "name": "Icon"
+      },
+      {
         "path": "/image",
         "name": "Image"
       },

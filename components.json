@@ -13,6 +13,7 @@
   "tab-container": "./packages/tab-container/index.js",
   "navbar": "./packages/navbar/index.js",
   "tabbar": "./packages/tabbar/index.js",
+  "icon": "./packages/icon/index.js",
   "image": "./packages/image/index.js",
   "image-preview": "./packages/image-preview/index.js",
   "search": "./packages/search/index.js",

@@ -11,6 +11,7 @@ import TabContainerItem from '../packages/tab-container-item';
 import TabContainer from '../packages/tab-container';
 import Navbar from '../packages/navbar';
 import Tabbar from '../packages/tabbar';
+import Icon from '../packages/icon';
 import Image from '../packages/image';
 import ImagePreview from '../packages/image-preview';
 import Search from '../packages/search';
@@ -38,6 +39,7 @@ import PaletteButton from '../packages/palette-button';
 import NoticeBar from '../packages/notice-bar';
 import Sticky from '../packages/sticky';
 import '../src/assets/font/iconfont.css';
+import '../src/assets/font/icon.css';
 import merge from './utils/merge';
 
 const version = '1.0.0';
@@ -57,6 +59,7 @@ export const install = function(Vue, config = {}) {
   Vue.component(TabContainer.name, TabContainer);
   Vue.component(Navbar.name, Navbar);
   Vue.component(Tabbar.name, Tabbar);
+  Vue.component(Icon.name, Icon);
   Vue.component(Image.name, Image);
   Vue.component(ImagePreview.name, ImagePreview);
   Vue.component(Search.name, Search);
@@ -106,6 +109,7 @@ export { default as TabContainerItem } from '../packages/tab-container-item';
 export { default as TabContainer } from '../packages/tab-container';
 export { default as Navbar } from '../packages/navbar';
 export { default as Tabbar } from '../packages/tabbar';
+export { default as Icon } from '../packages/icon';
 export { default as Image } from '../packages/image';
 export { default as ImagePreview } from '../packages/image-preview';
 export { default as Search } from '../packages/search';
@@ -148,6 +152,7 @@ export default {
   TabContainer,
   Navbar,
   Tabbar,
+  Icon,
   Image,
   ImagePreview,
   Search,
