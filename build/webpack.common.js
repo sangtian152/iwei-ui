@@ -13,10 +13,10 @@ module.exports = {
   output: {
     path: path.resolve(process.cwd(), './lib'),
     publicPath: '/dist/',
-    filename: 'zmbl-ui.common.js',
+    filename: 'iwei-ui.common.js',
     chunkFilename: '[id].js',
     libraryExport: 'default',
-    library: 'zmbl-ui',
+    library: 'iwei-ui',
     libraryTarget: 'commonjs2'
   },
   resolve: {
@@ -75,7 +75,7 @@ module.exports = {
     new MiniCssExtractPlugin({
       // Options similar to the same options in webpackOptions.output
       // all options are optional
-      filename: "zmbl-ui.common.css",
+      filename: "iwei-ui.common.css",
       chunkFilename: "[id].css",
     }),
     new VueLoaderPlugin()

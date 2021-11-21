@@ -1,19 +1,19 @@
 {
-  "name": "zmbl-ui",
+  "name": "iwei-ui",
   "version": "1.0.0",
   "author": "zzh",
   "private": false,
-  "main": "lib/zmbl-ui.common.js",
-  "homepage": "https://sangtian152.gitee.io/zm-mobile-ui",
+  "main": "lib/iwei-ui.common.js",
+  "homepage": "https://sangtian152.gitee.io/iwei-ui",
   "files": [
     "lib"
   ],
   "repository": {
     "type": "git",
-    "url": "https://gitee.com/sangtian152/zm-mobile-ui.git"
+    "url": "https://gitee.com/sangtian152/iwei-ui.git"
   },
   "keywords": [
-    "zmbl-ui",
+    "iwei-ui",
     "vue",
     "mobile-ui",
     "components"

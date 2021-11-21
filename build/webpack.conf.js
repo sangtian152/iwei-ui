@@ -17,7 +17,7 @@ module.exports = {
     chunkFilename: '[id].js',
     libraryTarget: 'umd',
     libraryExport: 'default',
-    library: 'zmbl-ui',
+    library: 'iwei-ui',
     umdNamedDefine: true,
     globalObject: 'typeof self !== \'undefined\' ? self : this'
   },
