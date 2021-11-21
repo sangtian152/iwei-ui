@@ -3,8 +3,8 @@ const WebpackBar = require('webpackbar');
 
 const resolve = (dir) => path.join(__dirname, dir)
 module.exports = {
-  publicPath:"",
-  outputDir: "./dist",
+  publicPath:"./",
+  outputDir: "dist",
   assetsDir: "static",
   pages: {
     demo: {
