@@ -27,7 +27,7 @@ export default {
     iframeSrc(){
       const { meta, path } = this.$route
       let route = meta && meta.demo ? meta.demo : path
-      return `/demo.html/#${route}`
+      return `./demo.html/#${route}`
     }
   },
   created(){},
