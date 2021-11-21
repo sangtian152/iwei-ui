@@ -1,15 +1,19 @@
 <template>
   <transition name="van-fade" @after-leave="onClosed">
-    <Popup class="zmbl-image-preview" v-model="value" :close-on-click-modal="false" :class="className">
-      <i class="zmbl-image-preview__close" v-if="closeable" @click="emitClose">×</i>
+    <Popup
+      class="zmbl-image-preview"
+      v-model="value"
+      :class="className"
+      @close="emitClose">
+      <icon class="zmbl-image-preview__close" name="roundclosefill" v-if="closeable" @click.native="emitClose" />
       <Swipe
         ref="swipe"
         lazyRender
-        :loop="loop"
         :auto="0"
         class="zmbl-image-preview__swipe"
+        :continuous="loop"
         :duration="swipeDuration"
-        :initialSwipe="startPosition"
+        :default-index="startPosition"
         :showIndicators="showIndicators"
         indicatorColor="white"
         @change="setActive"
@@ -25,6 +29,7 @@
             :rootWidth="rootWidth"
             :rootHeight="rootHeight"
             @scale="emitScale"
+            @click.native="onClick"
           />
         </template>
       </Swipe>
@@ -47,14 +52,9 @@
     transform: translateX(-50%);
   }
   .zmbl-image-preview__close {
-    color: #000;
-    width: 22px;
-    height: 22px;
+    color: #f7f7f7;
     font-size: 18px;
     text-align: center;
-    line-height: 22px;
-    background: #c8c9cc;
-    border-radius: 50%;
     position: absolute;
     top: 10px;
     right: 10px;
@@ -70,11 +70,13 @@ import { BindEventMixin } from 'zmbl-ui/src/mixins/bind-event';
 // Components
 import Popup from 'zmbl-ui/packages/popup'
 import Swipe from 'zmbl-ui/packages/swipe'
+import icon from 'zmbl-ui/packages/icon'
 import ImagePreviewItem from './image-preview-item';
 
 export default {
   name: 'zmbl-image-preview',
   components:{
+    icon,
     Popup,
     Swipe,
     ImagePreviewItem
@@ -137,6 +139,10 @@ export default {
       type: Boolean,
       default: true,
     },
+    closeOnClick: {
+      type: Boolean,
+      default: true,
+    },
     closeIconPosition: {
       type: String,
       default: 'top-right',
@@ -183,7 +189,11 @@ export default {
         this.rootHeight = rect.height;
       }
     },
-
+    onClick(){
+      if(this.closeOnClick) {
+        this.emitClose()
+      }
+    },
     emitClose() {
       if (!this.asyncClose) {
         this.$emit('input', false);

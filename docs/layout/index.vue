@@ -30,13 +30,9 @@ export default {
       return `/demo.html/#${route}`
     }
   },
-  created(){
-    console.log(this.$route.path, 15)
-  },
+  created(){},
   watch:{
-    iframeSrc(src){
-      console.log(src)
-    }
+    iframeSrc(src){}
   }
 }
 </script>

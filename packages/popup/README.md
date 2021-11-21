@@ -6,7 +6,7 @@
 ### 引入
 
 ```javascript
-import { Popup } from 'mint-ui';
+import { Popup } from 'iwei-ui';
 
 Vue.component(Popup.name, Popup);
 ```

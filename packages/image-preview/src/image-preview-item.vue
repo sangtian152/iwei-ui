@@ -10,6 +10,11 @@
     />
   </zmbl-swipe-item>
 </template>
+<style lang="scss">
+.zmbl-image-preview__swipe-item {
+  text-align: center;
+}
+</style>
 <script>
 // Utils
 import { range } from 'zmbl-ui/src/utils/util';

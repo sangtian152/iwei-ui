@@ -2,7 +2,7 @@
   <div class="zmbl-search">
     <div class="zmbl-searchbar">
       <div class="zmbl-searchbar-inner">
-        <i class="zmblui zmblui-search"></i>
+        <icon name="search" />
         <input
         ref="input"
         @click="visible = true"
@@ -29,29 +29,12 @@
 </template>
 
 <script>
+import icon from 'zmbl-ui/packages/icon/index.js';
 import XCell from 'zmbl-ui/packages/cell/index.js';
 if (process.env.NODE_ENV === 'component') {
   require('zmbl-ui/packages/cell/style.css');
 }
 
-/**
- * zmbl-search
- * @module components/search
- * @desc 搜索框
- * @param {string} value - 绑定值
- * @param {string} [cancel-text=取消] - 取消按钮文字
- * @param {string} [placeholder=取消] - 搜索框占位内容
- * @param {boolean} [autofocus=false] - 自动 focus
- * @param {boolean} [show=false] - 始终显示列表
- * @param {string[]} [result] - 结果列表
- * @param {slot} 结果列表
- *
- * @example
- * <zmbl-search :value.sync="value" :result.sync="result"></zmbl-search>
- * <zmbl-search :value.sync="value">
- *   <zmbl-cell v-for="item in result" :title="item"></zmbl-cell>
- * </zmbl-search>
- */
 export default {
   name: 'zmbl-search',
 
@@ -62,7 +45,7 @@ export default {
     };
   },
 
-  components: { XCell },
+  components: { XCell, icon },
 
   watch: {
     currentValue(val) {

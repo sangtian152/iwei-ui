@@ -6,7 +6,7 @@
 ### 引入
 
 ```javascript
-import { Checklist } from 'mint-ui';
+import { Checklist } from 'iwei-ui';
 
 Vue.component(Checklist.name, Checklist);
 ```

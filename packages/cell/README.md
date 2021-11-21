@@ -6,7 +6,7 @@
 ### 引入
 
 ```javascript
-import { Cell } from 'mint-ui';
+import { Cell } from 'iwei-ui';
 
 Vue.component(Cell.name, Cell);
 ```

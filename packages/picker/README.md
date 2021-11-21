@@ -5,7 +5,7 @@
 
 ### 引入
 ```javascript
-import { Picker } from 'mint-ui';
+import { Picker } from 'iwei-ui';
 
 Vue.component(Picker.name, Picker);
 ```
@@ -13,7 +13,7 @@ Vue.component(Picker.name, Picker);
 ### 基础用法
 传入 `slots`，当被选中的值发生变化时触发 `change` 事件。`change` 事件有两个参数，分别为当前 `picker` 的 `vue` 实例和各 `slot` 被选中的值组成的数组
 ```html
-<mt-picker :slots="slots" @change="onValuesChange"></mt-picker>
+<zmbl-picker :slots="slots" @change="onValuesChange"></zmbl-picker>
 ```
 ```javascript
 export default {
@@ -64,7 +64,7 @@ export default {
 |-------------------|---------------------------------------|
 | divider      | 对应 slot 是否为分隔符   |
 | content      | 分隔符 slot 的显示文本   |
-| values       | 对应 slot 的备选值数组。若为对象数组，则需在 mt-picker 标签上设置 value-key 属性来指定显示的字段名   |
+| values       | 对应 slot 的备选值数组。若为对象数组，则需在 zmbl-picker 标签上设置 value-key 属性来指定显示的字段名   |
 | defaultIndex      | 对应 slot 初始选中值，需传入其在 values 数组中的序号，默认为 0   |
 | textAlign      | 对应 slot 的对齐方式   |
 | flex       | 对应 slot CSS 的 flex 值   |

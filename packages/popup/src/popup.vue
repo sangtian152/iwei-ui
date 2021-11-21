@@ -147,6 +147,11 @@
         this.currentValue = true;
         this.open();
       }
+    },
+    methods:{
+      onClose(){
+        this.$emit('close')
+      }
     }
   };
 </script>

@@ -8,7 +8,7 @@
 ### 引入
 
 ```javascript
-import { Toast } from 'mint-ui';
+import { Toast } from 'iwei-ui';
 ```
 ### 基础用法
 ```javascript

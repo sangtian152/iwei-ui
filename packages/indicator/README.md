@@ -1,5 +1,7 @@
 ## Indicator
-加载提示框，支持自定义文本和加载图标。
+::: tip
+<div>加载提示框，支持自定义文本和加载图标。</div>
+:::
 
 ## 引入
 ```javascript
@@ -33,5 +35,3 @@ Indicator.close();
 | text        | indicator text | String                                                      |         |
 | spinnerType | spinner type   | 'snake', 'fading-circle', 'double-bounce', 'triple-bounce'  | 'snake' |
 
-### License
-MIT

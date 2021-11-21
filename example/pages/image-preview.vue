@@ -1,10 +1,17 @@
 <template>
   <div class="page-image-preview">
     <h1 class="page-title">ImagePreview</h1>
-    <div class="button">
-      <zmbl-button type="primary" @click="showImagePreview">点击打开dialog</zmbl-button>
+    <div class="img-list">
+      <zmbl-image
+        v-for="src in images"
+        width="100"
+        height="100"
+        :src="src"
+        :key="src"
+        @click="onClick(src)"
+      />
     </div>
-    <zmbl-image-preview v-model="show" :images="images" closeable @change="onChange">
+    <zmbl-image-preview v-model="show" :images="images" :start-position="index" :key="time" closeable @change="onChange">
       <span name="index" slot-scope="{index}">{{index}}</span>
     </zmbl-image-preview>
   </div>
@@ -21,12 +28,19 @@ export default {
     ];
     return {
       images,
-      show: false
+      show: false,
+      index: 0,
+      time: 0
     }
   },
   methods:{
     onChange(index) {
       this.index = index;
+    },
+    onClick(src){
+      this.show = true
+      this.index = this.images.indexOf(src);
+      this.time = new Date().getTime()
     },
     showImagePreview() {
       this.show = true

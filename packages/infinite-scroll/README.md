@@ -3,7 +3,7 @@
 
 ### 引入
 ```javascript
-import { InfiniteScroll } from 'mint-ui';
+import { InfiniteScroll } from 'iwei-ui';
 Vue.use(InfiniteScroll);
 ```
 

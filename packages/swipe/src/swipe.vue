@@ -43,7 +43,7 @@
         type: Number,
         default: 300
       },
-
+      vertical: Boolean,
       defaultIndex: {
         type: Number,
         default: 0

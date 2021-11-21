@@ -1,4 +1,4 @@
-var Components = require('../../components.json');
+var Components = require('../../demo.json');
 var fs = require('fs');
 var render = require('json-templater/string');
 var uppercamelcase = require('uppercamelcase');

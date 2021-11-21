@@ -1,5 +1,7 @@
 ## Action sheet
-操作表，从屏幕下方移入。
+::: tip
+<div>操作表，从屏幕下方移入。</div>
+:::
 
 ### 引入
 ```Javascript

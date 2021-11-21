@@ -7,7 +7,9 @@
     :style="barStyle"
     @click="$emit('click')"
   >
-    <slot name="left-icon"></slot>
+    <slot name="left-icon">
+       <icon v-if="leftIcon" class="zmbl-notice-bar__left-icon" :name="leftIcon" />
+    </slot>
     <div ref="wrap" class="zmbl-notice-bar__wrap" role="marquee">
       <div
         ref="content"
@@ -19,16 +21,22 @@
         <slot>{{text}}</slot>
       </div>
     </div>
-    <slot name="right-icon"></slot>
+    <slot name="right-icon">
+      <icon v-if="iconName" :name="iconName" @click.native="onClickIcon" />
+    </slot>
   </div>
 </template>
 <script>
+import icon from 'zmbl-ui/packages/icon';
 import { isDefined } from 'zmbl-ui/src/utils/types';
 import { doubleRaf, raf } from 'zmbl-ui/src/utils/raf';
 import { BindEventMixin } from 'zmbl-ui/src/mixins/bind-event';
 
 export default {
   name: 'zmbl-notice-bar',
+  components:{
+    icon
+  },
   mixins: [
     BindEventMixin(function (bind) {
       // fix cache issues with forwards and back history in safari
@@ -79,6 +87,15 @@ export default {
         color: this.color,
         background: this.background,
       }
+    },
+    iconName(){
+      let iconName;
+      if (this.mode === 'closeable') {
+        iconName = 'close';
+      } else if (this.mode === 'link') {
+        iconName = 'right';
+      }
+      return iconName
     }
   },
   watch: {

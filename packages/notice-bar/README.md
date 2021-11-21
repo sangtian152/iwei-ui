@@ -5,7 +5,7 @@
 
 ### 引入
 ```javascript
-import { NoticeBar } from 'mint-ui';
+import { NoticeBar } from 'iwei-ui';
 
 Vue.component(NoticeBar.name, NoticeBar);
 ```
