@@ -1,4 +1,4 @@
-import { on, off } from 'zmbl-ui/src/utils/dom';
+import { on, off } from 'iwei-ui/src/utils/dom';
 import { BindEventMixin } from './bind-event';
 
 export const CloseOnPopstateMixin = {

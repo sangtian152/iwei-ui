@@ -48,10 +48,10 @@
 </template>
 
 <script>
-import XCell from 'zmbl-ui/packages/cell/index.js';
-import Clickoutside from 'zmbl-ui/src/utils/clickoutside';
+import XCell from 'iwei-ui/packages/cell/index.js';
+import Clickoutside from 'iwei-ui/src/utils/clickoutside';
 if (process.env.NODE_ENV === 'component') {
-  require('zmbl-ui/packages/cell/style.css');
+  require('iwei-ui/packages/cell/style.css');
 }
 
 /**

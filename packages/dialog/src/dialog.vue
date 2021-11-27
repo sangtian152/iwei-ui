@@ -25,7 +25,7 @@
 
 <script>
 
-  import Popup from 'zmbl-ui/src/mixins/popup';
+  import Popup from 'iwei-ui/src/mixins/popup';
   export default {
     name: 'zmbl-dialog',
     mixins: [ Popup ],

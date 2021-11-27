@@ -24,10 +24,10 @@
   </span>
 </template>
 <script>
-import Popper from 'zmbl-ui/src/mixins/popper';
-import { on, off } from 'zmbl-ui/src/utils/dom';
-import { addClass, removeClass } from 'zmbl-ui/src/utils/dom';
-import { generateId } from 'zmbl-ui/src/utils/util';
+import Popper from 'iwei-ui/src/mixins/popper';
+import { on, off } from 'iwei-ui/src/utils/dom';
+import { addClass, removeClass } from 'iwei-ui/src/utils/dom';
+import { generateId } from 'iwei-ui/src/utils/util';
 
 export default {
   name: 'zmbl-popper',

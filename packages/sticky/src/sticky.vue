@@ -6,12 +6,12 @@
     </div>
 </template>
 <script>
-import { isHidden } from 'zmbl-ui/src/utils/style';
-import { unitToPx } from 'zmbl-ui/src/utils/format/unit';
-import { isDefined } from 'zmbl-ui/src/utils/types';
-import { isServer } from 'zmbl-ui/src/utils/util';
-import { getScrollTop, getElementTop, getScroller } from 'zmbl-ui/src/utils/scroll';
-import { BindEventMixin } from 'zmbl-ui/src/mixins/bind-event';
+import { isHidden } from 'iwei-ui/src/utils/style';
+import { unitToPx } from 'iwei-ui/src/utils/format/unit';
+import { isDefined } from 'iwei-ui/src/utils/types';
+import { isServer } from 'iwei-ui/src/utils/util';
+import { getScrollTop, getElementTop, getScroller } from 'iwei-ui/src/utils/scroll';
+import { BindEventMixin } from 'iwei-ui/src/mixins/bind-event';
 
 export default {
   name: 'zmbl-sticky',

@@ -142,13 +142,13 @@
     transform: translate3d(-50%, -50%, 0) scale(0.9);
   }
 </style>
-<style src="zmbl-ui/src/style/popup.css"></style>
+<style src="iwei-ui/src/style/popup.css"></style>
 
 <script type="text/babel">
   let CONFIRM_TEXT = '确定';
   let CANCEL_TEXT = '取消';
 
-  import Popup from 'zmbl-ui/src/mixins/popup';
+  import Popup from 'iwei-ui/src/mixins/popup';
 
   export default {
     mixins: [ Popup ],

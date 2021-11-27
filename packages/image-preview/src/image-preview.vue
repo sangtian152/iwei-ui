@@ -64,13 +64,13 @@
 </style>
 <script>
 // Mixins
-import { TouchMixin } from 'zmbl-ui/src/mixins/touch';
-import { BindEventMixin } from 'zmbl-ui/src/mixins/bind-event';
+import { TouchMixin } from 'iwei-ui/src/mixins/touch';
+import { BindEventMixin } from 'iwei-ui/src/mixins/bind-event';
 
 // Components
-import Popup from 'zmbl-ui/packages/popup'
-import Swipe from 'zmbl-ui/packages/swipe'
-import icon from 'zmbl-ui/packages/icon'
+import Popup from 'iwei-ui/packages/popup'
+import Swipe from 'iwei-ui/packages/swipe'
+import icon from 'iwei-ui/packages/icon'
 import ImagePreviewItem from './image-preview-item';
 
 export default {

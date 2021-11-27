@@ -29,10 +29,10 @@
 </template>
 
 <script>
-import icon from 'zmbl-ui/packages/icon/index.js';
-import XCell from 'zmbl-ui/packages/cell/index.js';
+import icon from 'iwei-ui/packages/icon/index.js';
+import XCell from 'iwei-ui/packages/cell/index.js';
 if (process.env.NODE_ENV === 'component') {
-  require('zmbl-ui/packages/cell/style.css');
+  require('iwei-ui/packages/cell/style.css');
 }
 
 export default {

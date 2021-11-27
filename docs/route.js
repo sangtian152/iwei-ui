@@ -12,7 +12,7 @@ const registerRoute = (config) => {
       route.push({
         name: page.name,
         path: page.path,
-        component: () => import(`zmbl-ui/packages/${dirName}/README.md`),
+        component: () => import(/* webpackChunkName: "chunk-docs" */ `iwei-ui/packages/${dirName}/README.md`),
         meta: {
           title: page.title || page.name,
           description: page.description

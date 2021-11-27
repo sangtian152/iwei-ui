@@ -12,7 +12,7 @@
     [
       "import",
       {
-        "libraryName": "zmbl-ui",
+        "libraryName": "iwei-ui",
         // "libraryDirectory": "lib",   // default: lib
         "style": true
       }
@@ -34,9 +34,9 @@
       ],
       "plugins": [
         ["module-resolver", {
-          "root": ["zmbl-ui"],
+          "root": ["iwei-ui"],
           "alias": {
-            "zmbl-ui/src": "zmbl-ui/lib"
+            "iwei-ui/src": "iwei-ui/lib"
           }
         }]
       ]

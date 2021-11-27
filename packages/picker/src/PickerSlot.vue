@@ -101,8 +101,8 @@
 <script type="text/babel">
   import draggable from './draggable';
   import translateUtil from './translate';
-  import { once, addClass, removeClass } from 'zmbl-ui/src/utils/dom';
-  import emitter from 'zmbl-ui/src/mixins/emitter';
+  import { once, addClass, removeClass } from 'iwei-ui/src/utils/dom';
+  import emitter from 'iwei-ui/src/mixins/emitter';
   import Vue from 'vue';
   if (!Vue.prototype.$isServer) {
     require('raf.js');

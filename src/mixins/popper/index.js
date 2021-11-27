@@ -1,9 +1,10 @@
 import Vue from 'vue';
 import {
   PopupManager
-} from 'zmbl-ui/src/mixins/popup';
+} from 'iwei-ui/src/mixins/popup';
 
-const PopperJS = Vue.prototype.$isServer ? function() {} : require('./popper');
+// const PopperJS = Vue.prototype.$isServer ? function() {} : require('./popper');
+import PopperJS from './popper'
 const stop = e => e.stopPropagation();
 
 /**

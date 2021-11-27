@@ -1,7 +1,7 @@
 /**
  * Bind event when mounted or activated
  */
-import { on, off } from 'zmbl-ui/src/utils/dom';
+import { on, off } from 'iwei-ui/src/utils/dom';
 
 let uid = 0;
 

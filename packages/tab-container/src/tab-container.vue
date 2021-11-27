@@ -33,7 +33,7 @@
 </style>
 
 <script>
-import { once } from 'zmbl-ui/src/utils/dom';
+import { once } from 'iwei-ui/src/utils/dom';
 
 /**
  * zmbl-tab-container

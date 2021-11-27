@@ -13,8 +13,8 @@
 </template>
 
 <script>
-  import { once } from 'zmbl-ui/src/utils/dom';
-  import { addClass, removeClass } from 'zmbl-ui/src/utils/dom';
+  import { once } from 'iwei-ui/src/utils/dom';
+  import { addClass, removeClass } from 'iwei-ui/src/utils/dom';
 
   export default {
     name: 'zmbl-swipe',

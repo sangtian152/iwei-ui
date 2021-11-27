@@ -56,8 +56,8 @@
 </style>
 
 <script type="text/babel">
-  import Popup from 'zmbl-ui/src/mixins/popup';
-  import 'zmbl-ui/src/style/popup.css';
+  import Popup from 'iwei-ui/src/mixins/popup';
+  import 'iwei-ui/src/style/popup.css';
 
   export default {
     name: 'zmbl-actionsheet',

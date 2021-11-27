@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import merge from 'zmbl-ui/src/utils/merge';
+import merge from 'iwei-ui/src/utils/merge';
 import PopupManager from './popup-manager';
 
 let idSeed = 1;

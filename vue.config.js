@@ -19,7 +19,8 @@ module.exports = {
         title: 'iwei-ui',
         // 在这个页面中包含的块，默认情况下会包含
         // 提取出来的通用 chunk 和 vendor chunk。
-        chunks: ['chunk-vendors', 'chunk-common', 'demo']
+        // chunks: ['chunk-vendors','chunk-common','chunk-libs', 'chunk-ui', 'chunk-example', 'demo']
+        chunks: ['runtime', 'chunk-vendors','chunk-common', 'demo']
     },
     docs: {
         // docs 的入口
@@ -32,7 +33,8 @@ module.exports = {
         // template 中的 title 标签需要是 <title><%= htmlWebpackPlugin.options.title %></title>
         title: 'iwei-ui',
         // 提取出来的通用 chunk 和 vendor chunk。
-        chunks: ['chunk-vendors', 'chunk-common', 'docs']
+        // chunks: ['chunk-vendors', 'chunk-common', 'chunk-libs', 'chunk-viewUI', 'chunk-docs', 'docs']
+        chunks: ['runtime', 'chunk-vendors', 'chunk-common', 'docs']
     },
   },
   css: {
@@ -59,11 +61,46 @@ module.exports = {
     .use('iview-loader')
       .loader('iview-loader')
       .tap(options => {
-        console.log(options)
           return {
             prefix: false
           }
       })
+      config
+      .when(process.env.NODE_ENV !== 'development',
+        config => {
+          /*config
+            .optimization.splitChunks({
+              chunks: 'all',
+              cacheGroups: {
+                vendor: {
+                  test: /\/src\//,
+                  name: 'iwei-ui',
+                  chunks: 'all'
+                }
+                libs: {
+                  name: 'chunk-libs',
+                  test: /[\\/]node_modules[\\/]/,
+                  priority: 10,
+                  chunks: 'initial' // only package third parties that are initially dependent
+                },
+                elementUI: {
+                  name: 'chunk-viewUI', // split elementUI into a single package
+                  priority: 20, // the weight needs to be larger than libs and app or it will be packaged into libs or app
+                  test: /[\\/]node_modules[\\/]_?view-design(.*)/ // in order to adapt to cnpm
+                },
+                commons: {
+                  name: 'chunk-ui',
+                  test: resolve('lib'), // can customize your rules
+                  minChunks: 3, //  minimum common number
+                  priority: 5,
+                  reuseExistingChunk: true
+                }
+              }
+            })*/
+          // https:// webpack.js.org/configuration/optimization/#optimizationruntimechunk
+          config.optimization.runtimeChunk('single')
+        }
+      )
   },
   configureWebpack: {
     resolve: {
@@ -71,11 +108,11 @@ module.exports = {
       alias: {
         'lib': resolve('lib'),
         'src': resolve('src'),
-        'zmbl-ui': resolve('./'),
+        'iwei-ui': resolve('./'),
         'docs': resolve('docs'),
         'example': resolve('example'),
       },
-      modules: ['node_modules']
+      modules: ['node_modules', resolve('lib')]
     },
     module: {
       rules: [{

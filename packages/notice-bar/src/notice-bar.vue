@@ -27,10 +27,10 @@
   </div>
 </template>
 <script>
-import icon from 'zmbl-ui/packages/icon';
-import { isDefined } from 'zmbl-ui/src/utils/types';
-import { doubleRaf, raf } from 'zmbl-ui/src/utils/raf';
-import { BindEventMixin } from 'zmbl-ui/src/mixins/bind-event';
+import icon from 'iwei-ui/packages/icon';
+import { isDefined } from 'iwei-ui/src/utils/types';
+import { doubleRaf, raf } from 'iwei-ui/src/utils/raf';
+import { BindEventMixin } from 'iwei-ui/src/mixins/bind-event';
 
 export default {
   name: 'zmbl-notice-bar',

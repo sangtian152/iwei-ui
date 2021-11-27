@@ -78,11 +78,11 @@
 </style>
 
 <script type="text/babel">
-  import Popup from 'zmbl-ui/src/mixins/popup';
-  import { CloseOnPopstateMixin } from 'zmbl-ui/src/mixins/close-on-popstate';
+  import Popup from 'iwei-ui/src/mixins/popup';
+  import { CloseOnPopstateMixin } from 'iwei-ui/src/mixins/close-on-popstate';
   import Vue from 'vue';
   if (!Vue.prototype.$isServer) {
-    require('zmbl-ui/src/style/popup.css');
+    require('iwei-ui/src/style/popup.css');
   }
 
   export default {

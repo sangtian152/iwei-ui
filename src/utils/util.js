@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import { isString, isObject, isDefined, isNumeric } from 'zmbl-ui/src/utils/types';
+import { isString, isObject, isDefined, isNumeric } from 'iwei-ui/src/utils/types';
 
 const hasOwnProperty = Object.prototype.hasOwnProperty;
 

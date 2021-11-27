@@ -25,7 +25,7 @@ yarn add iwei-ui
 ```javascript
 import Vue from 'vue';
 import ZmTreeOrg from 'iwei-ui';
-import "iwei-ui/lib/zmbl-ui.common.css";
+import "iwei-ui/lib/iwei-ui.common.css";
 
 Vue.use(ZmTreeOrg);
 ```

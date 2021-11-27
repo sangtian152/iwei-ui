@@ -1,5 +1,5 @@
 import InfiniteScroll from './directive';
-import 'zmbl-ui/src/style/empty.css';
+import 'iwei-ui/src/style/empty.css';
 import Vue from 'vue';
 
 const install = function(Vue) {

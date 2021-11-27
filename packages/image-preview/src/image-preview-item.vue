@@ -17,15 +17,15 @@
 </style>
 <script>
 // Utils
-import { range } from 'zmbl-ui/src/utils/util';
-import { preventDefault } from 'zmbl-ui/src/utils/dom';
+import { range } from 'iwei-ui/src/utils/util';
+import { preventDefault } from 'iwei-ui/src/utils/dom';
 
 // Mixins
-import { TouchMixin } from 'zmbl-ui/src/mixins/touch';
+import { TouchMixin } from 'iwei-ui/src/mixins/touch';
 
 // Component
-import Image from 'zmbl-ui/packages/image';
-import SwipeItem from 'zmbl-ui/packages/swipe-item';
+import Image from 'iwei-ui/packages/image';
+import SwipeItem from 'iwei-ui/packages/swipe-item';
 
 function getDistance(touches) {
   return Math.sqrt(

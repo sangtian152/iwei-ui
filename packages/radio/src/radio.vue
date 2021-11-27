@@ -21,9 +21,9 @@
 </template>
 
 <script>
-import XCell from 'zmbl-ui/packages/cell/index.js';
+import XCell from 'iwei-ui/packages/cell/index.js';
 if (process.env.NODE_ENV === 'component') {
-  require('zmbl-ui/packages/cell/style.css');
+  require('iwei-ui/packages/cell/style.css');
 }
 /**
  * zmbl-radio

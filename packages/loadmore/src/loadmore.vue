@@ -57,7 +57,7 @@
 </style>
 
 <script type="text/babel">
-  import spinner from 'zmbl-ui/packages/spinner/src/spinner/fading-circle.vue';
+  import spinner from 'iwei-ui/packages/spinner/src/spinner/fading-circle.vue';
   export default {
     name: 'zmbl-loadmore',
     components: {

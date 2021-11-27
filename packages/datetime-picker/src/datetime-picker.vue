@@ -54,11 +54,11 @@
 </style>
 
 <script type="text/babel">
-  import picker from 'zmbl-ui/packages/picker/index.js';
-  import popup from 'zmbl-ui/packages/popup/index.js';
+  import picker from 'iwei-ui/packages/picker/index.js';
+  import popup from 'iwei-ui/packages/popup/index.js';
   if (process.env.NODE_ENV === 'component') {
-    require('zmbl-ui/packages/picker/style.css');
-    require('zmbl-ui/packages/popup/style.css');
+    require('iwei-ui/packages/picker/style.css');
+    require('iwei-ui/packages/popup/style.css');
   }
 
   const FORMAT_MAP = {

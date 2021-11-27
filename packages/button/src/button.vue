@@ -19,7 +19,7 @@
 
 <script>
 if (process.env.NODE_ENV === 'component') {
-  require('zmbl-ui/packages/font/style.css');
+  require('iwei-ui/packages/font/style.css');
 }
 
 /**

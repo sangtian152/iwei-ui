@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import { addClass, removeClass } from 'zmbl-ui/src/utils/dom';
+import { addClass, removeClass } from 'iwei-ui/src/utils/dom';
 
 let hasModal = false;
 

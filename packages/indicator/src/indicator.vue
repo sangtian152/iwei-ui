@@ -61,9 +61,9 @@
 </style>
 
 <script type="text/babel">
-  import Spinner from 'zmbl-ui/packages/spinner/index.js';
+  import Spinner from 'iwei-ui/packages/spinner/index.js';
   if (process.env.NODE_ENV === 'component') {
-    require('zmbl-ui/packages/spinner/style.css');
+    require('iwei-ui/packages/spinner/style.css');
   }
 
   export default {

@@ -25,8 +25,8 @@
   </div>
 </template>
 <script>
-import { isDefined } from 'zmbl-ui/src/utils/types';
-import { addUnit, inBrowser } from 'zmbl-ui/src/utils/util';
+import { isDefined } from 'iwei-ui/src/utils/types';
+import { addUnit, inBrowser } from 'iwei-ui/src/utils/util';
 export default {
   name: 'zmbl-image',
   props: {

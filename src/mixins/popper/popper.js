@@ -28,6 +28,7 @@
 // Supported: Node, AMD, Browser globals
 //
 ;(function (root, factory) {
+  console.log(root, 31)
   if (typeof define === 'function' && define.amd) {
       // AMD. Register as an anonymous module.
       define(factory);
@@ -40,7 +41,7 @@
       // Browser globals (root is window)
       root.Popper = factory();
   }
-}(this, function () {
+}(this || window, function () {
 
   'use strict';
 
