@@ -1,0 +1,2 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-docs37"],{"4b2e":function(t,e,n){"use strict";n.r(e);var c=function(){var t=this,e=t.$createElement;t._self._c;return t._m(0)},s=[function(){var t=this,e=t.$createElement,n=t._self._c||e;return n("section",{staticClass:"content doc-main"},[n("h1",[t._v("zmbl-tab-item")])])}],a=n("2877"),l={},i=Object(a["a"])(l,c,s,!1,null,null,null);e["default"]=i.exports}}]);
+//# sourceMappingURL=chunk-docs37.077d2b23.js.map
