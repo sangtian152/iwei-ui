@@ -26,7 +26,6 @@
     "build": "vue-cli-service build",
     "build:file": "node build/bin/iconInit.js && node build/bin/componentInit.js",
     "build:entry": "node build/bin/build-entry",
-    "build:demo": "node build/bin/build-demo",
     "build:utils": "cross-env BABEL_ENV=utils babel src --out-dir lib --ignore src/index.js",
     "build:lib": "webpack --config build/webpack.conf.js && webpack --config build/webpack.common.js && webpack --config build/webpack.component.js && npm run build:utils",
     "pub": "npm run bootstrap && sh build/git-release.sh && sh build/release.sh"

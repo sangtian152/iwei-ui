@@ -2,8 +2,8 @@ import Vue from 'vue';
 import App from './app';
 import routes from './route';
 
-import {install as Mint} from 'src/index';
-// import 'iwei-ui/lib/iwei-ui.common.css'
+import {install as Mint} from 'iwei-ui';
+import 'iwei-ui/lib/iwei-ui.common.css'
 import VueRouter from 'vue-router';
 
 document.addEventListener('DOMContentLoaded', function() {

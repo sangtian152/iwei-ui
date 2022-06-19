@@ -11,4 +11,4 @@ dirs.forEach((dir) => {
 });
 
 
-fs.writeFile(path.resolve(__dirname, '../../demo.json'), JSON.stringify(components), () => {});
+fs.writeFile(path.resolve(__dirname, '../../components.json'), JSON.stringify(components), () => {});
